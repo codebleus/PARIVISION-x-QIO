@@ -1,0 +1,447 @@
+.manifest {
+  padding-top: 9.4rem;
+  padding-bottom: 17.6rem;
+
+  @media (max-width: 49em) {
+    padding-top: 11.7rem;
+    padding-bottom: 20.4rem;
+  }
+
+  @media (max-width: 64em) and (min-width: 49.01em) {
+    padding-top: 10.4rem;
+    margin-bottom: 3rem;
+    padding-bottom: 12rem;
+  }
+
+  // .manifest__container
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 64.01em) {
+      > .manifest__title:first-child {
+        margin-left: -1rem;
+      }
+    }
+  }
+
+  // .manifest__title
+  &__title {
+    margin-bottom: 1.6rem;
+
+    letter-spacing: 0.15rem;
+
+    &_right {
+      margin-left: auto;
+      margin-right: 1rem;
+    }
+
+    @media (max-width: 49em) {
+      margin-bottom: 2.5rem;
+
+      display: flex;
+      flex-direction: column;
+      row-gap: 1rem;
+
+      &:not(&_right) {
+        margin-left: -1rem;
+      }
+
+      span:nth-child(2) {
+        margin-left: auto;
+        margin-right: 1rem;
+      }
+
+      &:not(&_right, &:first-child) {
+        margin-bottom: 2rem;
+      }
+
+      &_right {
+        + .manifest__bg + .manifest__group {
+          margin-bottom: 15rem;
+        }
+      }
+    }
+
+    @media (min-width: 49.01em) {
+      margin-bottom: 4rem;
+
+      &:not(:first-child, &_right) {
+        margin-bottom: 5rem;
+      }
+
+      &_right {
+        margin-bottom: 3rem;
+      }
+    }
+
+    @media (max-width: 64em) and (min-width: 49.01em) {
+      margin-bottom: 3rem;
+
+      &_right {
+        margin-bottom: 1rem;
+
+        + .manifest__bg {
+          height: 70rem;
+
+          + .manifest__group {
+            margin-bottom: 8rem;
+
+            .manifest__text {
+              max-width: 100%;
+            }
+
+            + .manifest__title {
+              margin-bottom: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // .manifest__bg
+
+  &__bg {
+    margin-bottom: 8.3rem;
+
+    height: 108rem;
+    width: 100dvw;
+    transform: translateX(-1rem);
+
+    @media (max-width: 49em) {
+      margin-bottom: 8.8rem;
+
+      height: 56rem;
+
+      transform: translateX(-1.5rem);
+    }
+
+    @media (max-width: 64em) and (min-width: 49.01em) {
+      margin-bottom: 10.3rem;
+      height: 68rem;
+    }
+  }
+
+  // .manifest__bg-image
+
+  &__bg-image {
+    height: 100%;
+
+    object-fit: cover;
+  }
+
+  // .manifest__group
+
+  &__group {
+    margin-bottom: 17.1rem;
+
+    display: grid;
+    grid-template-columns: 1fr 128.5rem;
+
+    @media (max-width: 49em) {
+      margin-bottom: 12.6rem;
+
+      display: flex;
+      flex-direction: column;
+      row-gap: 1.6rem;
+    }
+
+    @media (max-width: 64em) and (min-width: 49.01em) {
+      margin-bottom: 6.1rem;
+
+      grid-template-columns: 1fr 101rem;
+    }
+  }
+
+  // .manifest__aside
+
+  &__aside {
+    @media (min-width: 49.01em) {
+      transform: translateX(-0.4rem);
+      padding-top: 0.2rem;
+    }
+    @media (max-width: 64em) and (min-width: 49.01em) {
+      transform: translateX(-0.5rem);
+    }
+  }
+
+  // .manifest__sm-txt
+
+  &__sm-txt {
+    font-size: 2rem;
+
+    @media (max-width: 49em) {
+      letter-spacing: 0.06rem;
+    }
+
+    @media (min-width: 49.01em) {
+      font-weight: 500;
+      font-size: 1.5rem;
+      letter-spacing: 0.15rem;
+
+      &:nth-last-child(2) {
+        margin-left: -0.5rem;
+      }
+    }
+    @media (max-width: 64em) and (min-width: 49.01em) {
+      letter-spacing: 0.05rem;
+    }
+  }
+
+  // .manifest__content
+
+  &__content {
+    @media (max-width: 64em) and (min-width: 49.01em) {
+      padding-top: 0.8rem;
+    }
+  }
+
+  // .manifest__text
+
+  &__text {
+    font-size: 3.2rem;
+    max-width: 95%;
+    line-height: 107%;
+
+    @media (min-width: 49.01em) {
+      font-size: 3.9rem;
+      line-height: 103%;
+      max-width: 97%;
+      letter-spacing: 0.04rem;
+    }
+
+    @media (min-width: 64.01em) {
+      font-weight: 500;
+    }
+
+    @media (max-width: 64em) and (min-width: 49.01em) {
+      line-height: 99%;
+      letter-spacing: 0.03rem;
+    }
+  }
+
+  // .manifest__image-text
+
+  &__image-text {
+    margin-bottom: 8.6rem;
+
+    display: flex;
+    justify-content: space-between;
+
+    + .manifest__group {
+      margin-bottom: 21rem;
+    }
+
+    @media (max-width: 49em) {
+      margin-bottom: 9rem;
+
+      flex-direction: row-reverse;
+
+      + .manifest__group {
+        margin-bottom: 7rem;
+      }
+    }
+
+    @media (max-width: 64em) and (min-width: 49.01em) {
+      margin-bottom: 10.6rem;
+
+      + .manifest__group {
+        margin-bottom: 13rem;
+
+        .manifest__text {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  // .manifest__image-wrap
+
+  &__image-wrap {
+    height: 55.6rem;
+
+    @media (min-width: 49.01em) {
+      flex: 0 0 137.9rem;
+      width: 137.9rem;
+      height: 107.1rem;
+      transform: translateX(-1rem);
+    }
+
+    @media (max-width: 49em) {
+      transform: translateX(2rem);
+      width: 66rem;
+    }
+
+    @media (max-width: 64em) and (min-width: 49.01em) {
+      flex: 0 0 83.9rem;
+      width: 83.9rem;
+      height: 70.1rem;
+    }
+  }
+
+  // .manifest__image
+
+  &__image {
+    height: 100%;
+
+    object-fit: cover;
+  }
+
+  // .manifest__text-content
+
+  &__text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media (min-width: 49em) {
+      margin-right: -0.5rem;
+      margin-bottom: -0.5rem;
+
+      text-align: right;
+    }
+
+    @media (max-width: 49em) {
+      margin-top: -1rem;
+    }
+
+    @media (max-width: 64em) and (min-width: 49.01em) {
+      margin-right: 0;
+      margin-bottom: 0;
+      margin-top: 0.5rem;
+    }
+  }
+
+  // .manifest__sm-image
+
+  &__sm-image {
+    margin-bottom: 9.7rem;
+    height: 53.1rem;
+    width: 100dvw;
+    transform: translateX(-1rem);
+
+    + .manifest__group {
+      margin-bottom: 7.5rem;
+    }
+
+    @media (max-width: 49em) {
+      margin-bottom: 13rem;
+
+      height: 32rem;
+
+      + .manifest__group {
+        margin-bottom: 12rem;
+      }
+    }
+
+    @media (max-width: 64em) and (min-width: 49.01em) {
+      margin-bottom: 8.7rem;
+
+      height: 40.1rem;
+
+      + .manifest__group {
+        margin-bottom: 2.5rem;
+
+        max-width: 100%;
+      }
+    }
+  }
+
+  // .manifest__lower-heading
+
+  &__lower-heading {
+    margin-top: 9.8rem;
+    margin-left: 1rem;
+    letter-spacing: 0.6rem;
+    font-family: var(--ff-heading);
+    font-style: italic;
+    font-size: 33.7rem;
+    line-height: 82%;
+
+    @media (max-width: 64em) and (min-width: 49.01em) {
+      margin-top: 5.8rem;
+      margin-left: 0rem;
+
+      font-size: 21.3rem;
+      white-space: nowrap;
+      letter-spacing: 0.6rem;
+    }
+
+    @media (max-width: 49em) {
+      margin-top: 2.6rem;
+      margin-left: 0;
+
+      font-size: 22.2rem;
+
+      display: flex;
+      flex-direction: column;
+
+      letter-spacing: 0.5rem;
+
+      span:nth-child(2) {
+        margin-left: auto;
+        margin-right: 1rem;
+      }
+    }
+  }
+}
+[data-page='manifest'],
+[data-page='schedule'] {
+  main {
+    @media (min-width: 64.01em) {
+      .lower-info {
+        bottom: 2.5rem;
+      }
+      .frame-btn__txt {
+        padding: 1.25rem 6.2rem;
+      }
+      .border {
+        width: 156.5%;
+        height: 129%;
+      }
+    }
+    @media (max-width: 64em) {
+      .lower-info {
+        &::after {
+          content: '';
+
+          position: absolute;
+          bottom: -3.5rem;
+          left: 50%;
+
+          width: 102%;
+          height: 2.5rem;
+
+          transform: translate(-50%, 50%);
+        }
+      }
+    }
+    @media (max-width: 64em) and (min-width: 49.01em) {
+      .lower-info {
+        &::after {
+          bottom: -2rem;
+          background: url(@img/vectors/2131327217.svg) center / contain repeat-x;
+        }
+      }
+      .frame-btn__txt {
+        padding: 0.5rem 4.2rem;
+      }
+      .border {
+        width: 233.5%;
+        height: 128%;
+      }
+    }
+    @media (max-width: 49em) {
+      .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+      .border {
+        width: 96%;
+        height: 88%;
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/_head.htm',{"title": "TEAM"})
+  <body>
+    <header class="header">
+      <div class="header__container container">
+        <a href="/" class="header__logo"
+          ><img src="@img/logo.svg" class="header__logo-img" alt=""
+        /></a>
+        <span id="section-heading" class="header__heading h-x">MAIN</span>
+
+        <nav class="header__nav">
+          <!-- <a href="#" class="header__nav-item">LOGIN</a>
+      <a href="#" class="header__nav-item">SHOP</a>
+      <a href="#" class="header__nav-item">CART</a> -->
+        </nav>
+        <button type="button" class="header__menu-btn">MENU</button>
+      </div>
+      @@include('html/_menu.htm',{})
+    </header>
+    <div class="capsule">
+      <div class="wrapper">
+        <main class="main">
+          @@include('html/team-chapter.htm',{})
+          <div class="lower-info">
+            <a href="#" class="lower-info__btn lower-info__btn_fl frame-btn">
+              <span class="frame-btn__inner">
+                <span class="frame-btn__txt">back to full list</span>
+              </span>
+              <span class="border"><span class="border__inner"></span></span>
+            </a>
+          </div>
+          <a href="#" class="lower__btn btn"
+            ><span class="btn__txt">other teams</span></a
+          >
+        </main>
+
+        @@include('html/_preloader.htm',{}) @@include('html/_footer.htm',{})
+        @@include('html/_svg.htm',{})
+      </div>
+    </div>
+
+    @@include('html/_js.htm',{})
+  </body>
+</html>

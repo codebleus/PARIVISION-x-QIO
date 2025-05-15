@@ -1,0 +1,267 @@
+<html style="background-color: #000000" lang="en">
+
+<head>
+	<title>PARIVISION x QIO</title>
+	<meta charset="UTF-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="shortcut icon" href="favicon.ico" />
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+
+	<!-- critical js -->
+	<script>
+		document.fonts.ready.then(function() {
+				const e = document.getElementById('loader-time');
+				if (e) {
+					setInterval(function() {
+						const n = new Date();
+						let t = n.getHours(),
+							o = n.getMinutes(),
+							l = n.getSeconds();
+						t < 10 && (t = '0' + t),
+							o < 10 && (o = '0' + o),
+							l < 10 && (l = '0' + l),
+							(e.innerHTML = `${t + ':'}${o + ':'}${l}`);
+					}, 500);
+				}
+				const n = document.querySelectorAll('.preloader__progress');
+				if (n.length) {
+					for (let e = 0; e < n.length; e++) {
+						const t = n[e];
+						let o = 0,
+							l = setInterval(function() {
+								(t.innerHTML = ++o), o >= 99 && clearInterval(l);
+							}, 10);
+					}
+				}
+			}),
+			(document.fonts.onloadingdone = function(e) {
+				document.documentElement.classList.add('_fonts-loaded');
+			});
+	</script>
+
+	<!-- critical css  -->
+	<style>
+		html::before {
+			content: '';
+
+			position: fixed;
+			z-index: 2;
+			inset: 0;
+
+			background-image: url(img/vectors/bg.svg);
+			background-position: center var(--y);
+			background-size: contain;
+			background-repeat: repeat;
+		}
+
+		._fonts-loaded .preloader__container {
+			opacity: 1;
+			filter: blur(0);
+			transform: translateY(0);
+		}
+
+		@media (max-width: 49em) {
+			html::before {
+				background-image: url(img/vectors/bg-m.svg);
+			}
+		}
+	</style>
+
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="preload" href="https://unpkg.com/lenis@1.2.3/dist/lenis.css" as="style" onload="this.rel='stylesheet'" />
+</head>
+
+
+<body>
+	<div style="
+        position: relative;
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 2500px;
+        margin: 0 auto;
+        padding: 5rem;
+      ">
+		<div id="feat" style="
+          margin-bottom: 11.5rem;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          row-gap: 4rem;
+        ">
+			<svg style="width: 70rem" viewBox="0 0 1559 161" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<g clip-path="url(#clip0_2008_1884)">
+					<path d="M719.945 154.95L711 25.1071L718.415 2.1925H765.307L768.792 109.14H770.98L841.627 2.1925H888.519L881.084 25.1071L787.552 154.95H719.945Z" fill="white" />
+					<path d="M1559 2.1925L1509.28 154.95H1456.95L1421.33 73.3812L1397.09 147.965L1394.8 154.95H1346.83L1396.54 2.1925H1448.88L1484.5 83.7811L1511.02 2.1925H1559Z" fill="white" />
+					<path d="M852.953 154.95L902.671 2.1925H950.628L900.929 154.95H852.953Z" fill="white" />
+					<path d="M920.541 154.95L934.5 112.4H1036.98L1039.8 103.669L977.229 94.9376C965.013 93.3272 956.92 89.4466 952.912 83.2572C948.905 77.0677 948.73 68.2395 952.37 56.753L958.043 39.2906C961.818 27.7847 968.111 18.743 976.9 12.1073C985.69 5.49097 995.835 2.1731 1007.32 2.1731H1118.52L1109.58 29.4534L1089.31 44.7233H1006.44L1003.62 53.4546L1066.19 62.1858C1078.41 63.7962 1086.5 67.6768 1090.51 73.8662C1094.52 80.0557 1094.69 88.884 1091.05 100.37L1085.38 117.833C1081.58 129.339 1075.31 138.38 1066.52 145.016C1057.73 151.632 1047.59 154.95 1036.11 154.95H920.522H920.541Z" fill="white" />
+					<path d="M1091.71 154.95L1141.43 2.1925H1189.4L1139.69 154.95H1091.71Z" fill="white" />
+					<path d="M1223.63 114.593H1289.05L1312.62 42.5696H1247.2L1223.63 114.593ZM1173.92 120.045L1200.94 37.1174C1204.58 25.6116 1210.8 16.5699 1219.59 9.9342C1228.38 3.31786 1238.52 0 1250 0H1337.22C1348.7 0 1356.66 3.31786 1361.09 9.9342C1365.53 16.5505 1365.93 25.6116 1362.29 37.1174L1335.27 120.045C1331.63 131.551 1325.41 140.592 1316.62 147.228C1307.83 153.844 1297.69 157.162 1286.21 157.162H1198.99C1187.51 157.162 1179.53 153.864 1175.12 147.228C1170.68 140.612 1170.28 131.551 1173.92 120.045Z" fill="white" />
+					<path d="M78.7673 73.6963H140.902L150.557 43.7683H88.4227L78.7673 73.6963ZM-0.388 161.209L52.091 0H176.36C188.47 0 196.875 3.50146 201.549 10.4807C206.223 17.46 206.577 27.0417 202.588 39.1549L189.934 78.3097C186.086 90.4466 179.547 100.005 170.269 106.984C160.968 113.963 150.297 117.465 138.163 117.465H64.5321L50.2733 161.233H-0.340776L-0.388 161.209Z" fill="white" />
+					<path d="M251.124 95.5805H290.242L287.952 46.0632H285.662L251.148 95.5805H251.124ZM157.238 161.209L165.052 137.03L268.381 0H335.119L349.165 137.03L341.351 161.209H291.87L291.634 137.03H222.607L206.719 161.209H157.238Z" fill="white" />
+					<path d="M436.135 64.4932H500.559L507.24 43.7683H442.815L436.135 64.4932ZM353.981 161.209L406.46 0H533.019C545.13 0 553.534 3.50146 558.208 10.4807C562.882 17.46 563.236 27.0417 559.247 39.1549L549.591 69.0829C545.46 81.8112 537.788 91.3456 526.574 97.6388C521.522 100.572 516.281 102.56 510.923 103.624L530.942 137.007L523.128 161.186H477.117L450.653 108.214H421.899L404.642 161.186H354.028L353.981 161.209Z" fill="white" />
+					<path d="M543.831 161.209L596.287 0H646.924L594.445 161.209H543.831Z" fill="white" />
+				</g>
+				<defs>
+					<clipPath id="clip0_2008_1884">
+						<rect width="1559" height="161" fill="white" />
+					</clipPath>
+				</defs>
+			</svg>
+
+			<svg style="width: 3rem" viewBox="0 0 64 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<line x1="1.0869" y1="61.5629" x2="61.0493" y2="1.60049" stroke="#2EB6A8" stroke-width="2" />
+				<line x1="2.50124" y1="1.60051" x2="62.4637" y2="61.5629" stroke="#2EB6A8" stroke-width="2" />
+			</svg>
+
+			<svg style="width: 20rem" viewBox="0 0 401 104" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<g clip-path="url(#clip0_2010_1984)">
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M223.615 49.8546C223.615 21.3001 246.762 0.175049 275.54 0.175049H330.327C359.105 0.175049 382.252 21.3001 382.252 49.8546V54.2079C382.252 82.7624 359.105 103.887 330.327 103.887H275.54C246.762 103.887 223.615 82.7624 223.615 54.2079V49.8546ZM275.54 19.5463C257.2 19.5463 244.385 33.7431 244.385 49.8546V54.2079C244.385 70.3195 257.2 84.4746 275.54 84.4746H330.327C348.667 84.4746 361.482 70.3195 361.482 54.2079V49.8546C361.482 33.7431 348.667 19.5463 330.327 19.5463H275.54Z" fill="white" />
+					<path d="M205.287 0.116211V103.963H184.517L184.517 18.4182L205.287 0.116211Z" fill="white" />
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M56.9249 19.5956L111.82 19.5946C129.644 19.5943 142.975 34.1794 142.975 51.9543V62.3953H163.745V51.9543C163.745 22.7398 141.114 0.171369 111.819 0.171875L56.9246 0.172844C27.6053 0.173351 5 22.8422 5 52.0312C5 81.2207 27.6059 103.89 56.9255 103.89H159.71L142.533 84.4868H56.9255C39.1265 84.4868 25.7702 69.215 25.7702 52.0312C25.7702 34.8475 39.1261 19.5959 56.9249 19.5956Z" fill="white" />
+				</g>
+				<path d="M391.937 8.33109C392.21 8.33109 392.465 8.27926 392.7 8.1756C392.936 8.07194 393.143 7.93059 393.322 7.75154C393.501 7.57249 393.643 7.36046 393.746 7.11545C393.85 6.87044 393.902 6.61129 393.902 6.33801C393.902 6.06472 393.85 5.81029 393.746 5.5747C393.643 5.33911 393.501 5.13179 393.322 4.95275C393.143 4.7737 392.936 4.63235 392.7 4.52869C392.465 4.42503 392.21 4.3732 391.937 4.3732H388.389V8.33109H391.937ZM387.258 3.38373H392.064C392.479 3.38373 392.865 3.46383 393.223 3.62403C393.581 3.7748 393.892 3.98683 394.156 4.26012C394.429 4.52398 394.642 4.83495 394.792 5.19305C394.952 5.55114 395.033 5.93751 395.033 6.35214C395.033 6.80447 394.938 7.22382 394.75 7.61018C394.571 7.98713 394.331 8.31224 394.029 8.58552C394.246 8.71745 394.415 8.90592 394.538 9.15093C394.66 9.38652 394.722 9.65509 394.722 9.95665V13.5611H393.591V9.95665C393.591 9.76818 393.544 9.6174 393.449 9.50432C393.355 9.38181 393.233 9.32056 393.082 9.32056H388.389V13.5611H387.258V3.38373Z" fill="white" />
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M390.904 16.8245C395.518 16.8245 399.258 13.0842 399.258 8.47034C399.258 3.85648 395.518 0.116211 390.904 0.116211C386.29 0.116211 382.55 3.85648 382.55 8.47034C382.55 13.0842 386.29 16.8245 390.904 16.8245ZM390.903 15.8906C395.004 15.8906 398.328 12.5661 398.328 8.46512C398.328 4.36417 395.004 1.03969 390.903 1.03969C386.802 1.03969 383.478 4.36417 383.478 8.46512C383.478 12.5661 386.802 15.8906 390.903 15.8906Z" fill="white" />
+				<defs>
+					<clipPath id="clip0_2010_1984">
+						<rect width="387.206" height="103.846" fill="white" transform="translate(0 0.116211)" />
+					</clipPath>
+				</defs>
+			</svg>
+		</div>
+
+		<ul style="display: flex; flex-wrap: wrap; width: 100%; gap: 6rem">
+			<li>
+				<a target="_blank" href="./home.html"> homepage </a>
+			</li>
+			<li>
+				<a target="_blank" href="./teams.html"> teams </a>
+			</li>
+			<li>
+				<a target="_blank" href="./team.html"> team </a>
+			</li>
+			<li>
+				<a target="_blank" href="./partners.html"> partners </a>
+			</li>
+			<li>
+				<a target="_blank" href="./contacts.html"> contacts </a>
+			</li>
+			<li>
+				<a target="_blank" href="./media.html"> media </a>
+			</li>
+			<li>
+				<a target="_blank" href="./media-chapter.html"> media chapter </a>
+			</li>
+			<li>
+				<a target="_blank" href="./gallery.html"> gallery </a>
+			</li>
+			<li>
+				<a target="_blank" href="./guidelines.html"> guidelines </a>
+			</li>
+			<li>
+				<a target="_blank" href="./news.html"> news </a>
+			</li>
+			<li>
+				<a target="_blank" href="./news-chapter.html"> news chapter </a>
+			</li>
+			<li>
+				<a target="_blank" href="./shop-dummy.html"> SHOP (DUMMY) </a>
+			</li>
+			<li>
+				<a target="_blank" href="./player.html"> player </a>
+			</li>
+			<li>
+				<a target="_blank" href="./manifest.html"> manifest </a>
+			</li>
+			<li>
+				<a target="_blank" href="./schedule.html"> schedule </a>
+			</li>
+		</ul>
+	</div>
+	<style>
+		@charset "UTF-8";
+
+		* {
+			padding: 0;
+			margin: 0;
+			border: 0;
+			box-sizing: border-box;
+		}
+
+		html,
+		body {
+			margin: 0;
+			padding: 0;
+
+			height: 100%;
+			width: 100%;
+
+			color: #2bffe8;
+		}
+
+		html {
+			font-size: 0.5208335vw;
+		}
+
+		body {
+			padding: 5rem 0;
+
+			font-family: 'Heading Now';
+			line-height: 1;
+			font-size: 2.5rem;
+			text-transform: uppercase;
+			font-style: italic;
+			font-weight: 800;
+
+			user-select: none;
+		}
+
+		ul {
+			margin-bottom: 10rem;
+		}
+
+		li {
+			list-style: none;
+		}
+
+		a {
+			font-size: 5rem;
+			text-decoration: none;
+
+			transition: color 0.3s ease-in-out;
+		}
+
+		a span {
+			margin-right: 1rem;
+
+			font-family: 'Arial';
+		}
+
+		a,
+		a:visited {
+			color: #2bffe8;
+		}
+
+		a:hover {
+			color: #ffffff;
+		}
+
+		h1 {
+			margin-bottom: 5rem;
+
+			font-size: 5rem;
+			text-align: center;
+		}
+
+		@media (max-width: 49em) {
+			html {
+				font-size: 1.3625vw;
+			}
+		}
+	</style>
+	<script src="js/index.js"></script>
+</body>
+
+</html>

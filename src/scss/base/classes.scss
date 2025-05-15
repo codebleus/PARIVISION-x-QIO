@@ -1,0 +1,21 @@
+%blur {
+  opacity: 0;
+  filter: blur(1rem);
+}
+%opacity {
+  opacity: 0;
+}
+%ob-t {
+  opacity: 0;
+  filter: blur(1.5rem);
+  transform: translateY(30%);
+}
+%o-t {
+  opacity: 0;
+  transform: translateY(30%);
+}
+%ov-t {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(30%);
+}

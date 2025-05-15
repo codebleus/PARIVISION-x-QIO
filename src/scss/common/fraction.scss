@@ -1,0 +1,22 @@
+.fraction {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  // .fraction__txt
+
+  &__txt {
+    // .fraction__txt_current
+
+    &_current {
+      &::after {
+        content: '//';
+      }
+    }
+
+    // .fraction__txt_total
+
+    &_total {
+    }
+  }
+}

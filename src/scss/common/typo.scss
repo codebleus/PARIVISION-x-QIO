@@ -1,0 +1,78 @@
+.txt-s {
+  font: var(--txt-s);
+  letter-spacing: 0.1rem;
+}
+
+.txt-xs {
+  font: var(--txt-xs);
+}
+
+.num {
+  font-family: 'Druk Text Cyr';
+  font-style: italic;
+
+  [data-page='media'] & {
+    @media (min-width: 49.01em) {
+      margin-left: -1rem;
+    }
+  }
+
+  [data-page='teams'] & {
+    @media (max-width: 49em) {
+      margin-left: -3rem;
+    }
+  }
+}
+
+.h-x {
+  font: var(--txt-x);
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+
+  @media (max-width: 64em) and (min-width: 49.01em) {
+    font-size: 5rem;
+    letter-spacing: 0.4rem;
+
+    [data-page='contact'] & {
+      font-size: 6rem;
+      letter-spacing: 0.3rem;
+    }
+  }
+}
+
+.title-nrml {
+  font-family: 'Heading Now';
+  font-size: var(--fz-36);
+  line-height: 3.8rem;
+
+  @media (max-width: 49em) {
+    font-size: var(--fz-56);
+  }
+
+  @media (max-width: 64em) and (min-width: 49.01em) {
+    line-height: 109%;
+    font-size: 4.3rem;
+  }
+}
+
+.screen-heading {
+  font: var(--h-x);
+  white-space: nowrap;
+  letter-spacing: 0.1rem;
+
+  @media (max-width: 64em) and (min-width: 49.01em) {
+    font-size: 12rem;
+
+    [data-page='contact'] & {
+      font-size: 14rem;
+      letter-spacing: 0.1rem;
+    }
+  }
+}
+
+.screen-txt {
+  font: var(--txt-s);
+  line-height: 133%;
+
+  opacity: 0.7;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/_head.htm',{"title": "CONTACTS"})
+  <body>
+    @@include('html/_header.htm',{})
+    <div class="capsule">
+      <div class="wrapper">
+        <main class="main">
+          @@include('html/contacts.htm',{})
+          <div class="lower-info">
+            <button
+              type="button"
+              class="lower-info__btn lower-info__btn_presskit frame-btn">
+              <span class="frame-btn__inner">
+                <span class="frame-btn__txt">download presskit</span>
+              </span>
+              <span class="border"><span class="border__inner"></span></span>
+            </button>
+            <ul class="homepage-table__list">
+              <li
+                class="homepage-table__list-item homepage-table__list-item_all list-item-homepage-table">
+                <a href="#" class="list-item-homepage-table__inner">
+                  <div class="list-item-homepage-table__info">
+                    <span class="list-item-homepage-table__heading txt-s">
+                      view all
+                    </span>
+                    <span class="list-item-homepage-table__txt txt-xs"
+                      >enter the game schedule</span
+                    >
+                  </div>
+                </a>
+              </li>
+              <li class="homepage-table__list-item list-item-homepage-table">
+                <div class="list-item-homepage-table__inner">
+                  <div class="list-item-homepage-table__icon">
+                    <img
+                      src="@img/content/AM2.webp"
+                      class="list-item-homepage-table__icon-img"
+                      alt="" />
+                  </div>
+                  <div class="list-item-homepage-table__info">
+                    <span class="list-item-homepage-table__heading txt-s">
+                      PARI vs 500
+                    </span>
+                    <span class="list-item-homepage-table__txt txt-xs"
+                      >18:00 — 13 Feb 2025</span
+                    >
+                  </div>
+                  <div class="list-item-homepage-table__group">
+                    <svg class="list-item-homepage-table__group-icon">
+                      <use href="#logo-svg"></use>
+                    </svg>
+                    <span class="list-item-homepage-table__group-txt">500</span>
+                  </div>
+                </div>
+              </li>
+              <li class="homepage-table__list-item list-item-homepage-table">
+                <div class="list-item-homepage-table__inner">
+                  <div class="list-item-homepage-table__icon">
+                    <img
+                      src="@img/content/AM2.webp"
+                      class="list-item-homepage-table__icon-img"
+                      alt="" />
+                  </div>
+                  <div class="list-item-homepage-table__info">
+                    <span class="list-item-homepage-table__heading txt-s">
+                      PARI vs 500
+                    </span>
+                    <span class="list-item-homepage-table__txt txt-xs"
+                      >18:00 — 13 Feb 2025</span
+                    >
+                  </div>
+                  <div class="list-item-homepage-table__group">
+                    <svg class="list-item-homepage-table__group-icon">
+                      <use href="#logo-svg"></use>
+                    </svg>
+                    <span class="list-item-homepage-table__group-txt">500</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </main>
+
+        @@include('html/_preloader.htm',{}) @@include('html/_footer.htm',{})
+        @@include('html/_svg.htm',{})
+      </div>
+    </div>
+
+    @@include('html/_js.htm',{})
+  </body>
+</html>

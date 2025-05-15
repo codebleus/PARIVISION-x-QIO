@@ -1,0 +1,67 @@
+// --------------------------------- classes --------------------------------
+
+@import 'base/classes';
+
+// -------------------------------- variables -------------------------------
+
+@import 'base/vars';
+
+// ---------------------------------- fonts ---------------------------------
+
+// local fonts
+@import 'base/fonts';
+
+// ------------------------------- base styles ------------------------------
+
+// base scss
+@import 'base/set';
+@import 'base/header';
+@import 'base/layout';
+@import 'base/footer';
+
+// lib
+@import 'lib/swiper';
+
+// common scss
+@import 'common/typo';
+@import 'common/btn';
+@import 'common/forms';
+@import 'common/menu';
+@import 'common/homepage-table';
+@import 'common/preloader';
+@import 'common/socials';
+@import 'common/filters';
+@import 'common/fraction';
+
+.wrapper {
+  position: relative;
+}
+
+html:not(._page-loaded) {
+  overflow: hidden;
+}
+// --------------------------------------------------------------------------
+
+// sections
+@import 'sections/hero';
+@import 'sections/about';
+@import 'sections/team';
+@import 'sections/leaders';
+@import 'sections/teams';
+@import 'sections/news';
+@import 'sections/contacts';
+@import 'sections/links';
+@import 'sections/team-chapter';
+@import 'sections/partners';
+@import 'sections/media';
+@import 'sections/media-chapter';
+@import 'sections/gallery';
+@import 'sections/guidelines';
+@import 'sections/news-section';
+@import 'sections/shop-dummy';
+@import 'sections/player';
+@import 'sections/manifest';
+@import 'sections/schedule';
+@import 'sections/article';
+@import 'sections/other';
+@import 'sections/achievements';

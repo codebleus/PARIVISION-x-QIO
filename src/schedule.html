@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/_head.htm',{"title": "SCHEDULE"})
+  <body>
+    <header class="header">
+      <div class="header__container container">
+        <a href="/" class="header__logo"
+          ><img src="@img/logo.svg" class="header__logo-img" alt=""
+        /></a>
+        <span id="section-heading" class="header__heading h-x">MAIN</span>
+
+        <button type="button" class="header__sort-btn">sort</button>
+        <button type="button" class="header__menu-btn">MENU</button>
+      </div>
+
+      @@include('html/_menu.htm',{})
+    </header>
+    <div class="capsule">
+      <div class="wrapper">
+        <main class="main">
+          @@include('html/schedule.htm',{})
+          <ul class="header__sort-list homepage-table__list">
+            <li
+              class="homepage-table__list-item homepage-table__list-item_all list-item-homepage-table">
+              <button type="button" class="list-item-homepage-table__inner">
+                <div class="list-item-homepage-table__info">
+                  <span class="list-item-homepage-table__heading txt-s">
+                    sort
+                  </span>
+                  <span class="list-item-homepage-table__txt txt-xs"
+                    >by type</span
+                  >
+                </div>
+                <div class="list-item-homepage-table__info _active-only">
+                  <span class="list-item-homepage-table__heading txt-s">
+                    back
+                  </span>
+                </div>
+              </button>
+            </li>
+            <li class="homepage-table__list-item list-item-homepage-table">
+              <div class="list-item-homepage-table__inner">
+                <input
+                  type="checkbox"
+                  name="gameName"
+                  class="list-item-homepage-table__input" />
+                <span class="list-item-homepage-table__heading txt-s">
+                  <span class="list-item-homepage-table__icon-wrap">
+                    <img
+                      src="@img/logos/tanks.svg"
+                      alt=""
+                      class="list-item-homepage-table__icon-img" />
+                  </span>
+                </span>
+              </div>
+            </li>
+            <li class="homepage-table__list-item list-item-homepage-table">
+              <div class="list-item-homepage-table__inner">
+                <input
+                  type="checkbox"
+                  name="gameName"
+                  class="list-item-homepage-table__input" />
+                <span class="list-item-homepage-table__heading txt-s">
+                  <span class="list-item-homepage-table__icon-wrap">
+                    <img
+                      src="@img/logos/dota.svg"
+                      alt=""
+                      class="list-item-homepage-table__icon-img" />
+                  </span>
+                </span>
+              </div>
+            </li>
+            <li class="homepage-table__list-item list-item-homepage-table">
+              <div class="list-item-homepage-table__inner">
+                <input
+                  type="checkbox"
+                  name="gameName"
+                  class="list-item-homepage-table__input" />
+                <span class="list-item-homepage-table__heading txt-s">
+                  <span class="list-item-homepage-table__icon-wrap">
+                    <img
+                      src="@img/logos/cs.svg"
+                      alt=""
+                      class="list-item-homepage-table__icon-img" />
+                  </span>
+                </span>
+              </div>
+            </li>
+            <li
+              class="homepage-table__list-item homepage-table__list-item_sublist">
+              <ul class="homepage-table__sublist">
+                <li class="homepage-table__list-item list-item-homepage-table">
+                  <div class="list-item-homepage-table__inner">
+                    <input
+                      type="checkbox"
+                      name="gameStage"
+                      class="list-item-homepage-table__input" />
+                    <span class="list-item-homepage-table__heading txt-s">
+                      past
+                    </span>
+                  </div>
+                </li>
+                <li class="homepage-table__list-item list-item-homepage-table">
+                  <div class="list-item-homepage-table__inner">
+                    <input
+                      type="checkbox"
+                      name="gameStage"
+                      class="list-item-homepage-table__input" />
+                    <span class="list-item-homepage-table__heading txt-s">
+                      now
+                    </span>
+                  </div>
+                </li>
+                <li class="homepage-table__list-item list-item-homepage-table">
+                  <div class="list-item-homepage-table__inner">
+                    <input
+                      type="checkbox"
+                      name="gameStage"
+                      class="list-item-homepage-table__input" />
+                    <span class="list-item-homepage-table__heading txt-s">
+                      future
+                    </span>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </main>
+
+        @@include('html/_preloader.htm',{}) @@include('html/_footer.htm',{})
+        @@include('html/_svg.htm',{})
+      </div>
+    </div>
+
+    <div class="lower-info"></div>
+    @@include('html/_js.htm',{})
+  </body>
+</html>

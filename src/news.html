@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/_head.htm',{"title": "NEWS"})
+  <body>
+    @@include('html/_header.htm', {})
+    <div class="capsule">
+      <div class="wrapper">
+        <main class="main">@@include('html/news-section.htm',{})</main>
+        <div class="sort">
+          <button type="button" class="sort__btn btn">
+            <span class="btn__group">
+              <span class="btn__txt">tags</span>
+            </span>
+          </button>
+          <div class="sort__tags-list tags-list">
+            <div class="tags-list__inner">
+              <ul class="tags-list__list">
+                <li class="tags-list__item">
+                  <div class="tags-list__inner btn">
+                    <input
+                      type="checkbox"
+                      name="newsTag"
+                      class="tags-list__input" />
+                    <span class="btn__txt btn">ESPORT</span>
+                  </div>
+                </li>
+                <li class="tags-list__item">
+                  <div class="tags-list__inner btn">
+                    <input
+                      type="checkbox"
+                      name="newsTag"
+                      class="tags-list__input" />
+                    <span class="btn__txt btn">DEADLOCK</span>
+                  </div>
+                </li>
+                <li class="tags-list__item">
+                  <div class="tags-list__inner btn">
+                    <input
+                      type="checkbox"
+                      name="newsTag"
+                      class="tags-list__input" />
+                    <span class="btn__txt btn">CS2</span>
+                  </div>
+                </li>
+                <li class="tags-list__item">
+                  <div class="tags-list__inner btn">
+                    <input
+                      type="checkbox"
+                      name="newsTag"
+                      class="tags-list__input" />
+                    <span class="btn__txt btn">DOTA2 </span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        @@include('html/_preloader.htm',{}) @@include('html/_footer.htm',{})
+        @@include('html/_svg.htm',{})
+      </div>
+    </div>
+
+    @@include('html/_js.htm',{})
+  </body>
+</html>

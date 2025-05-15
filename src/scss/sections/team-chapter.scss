@@ -1,0 +1,241 @@
+.team-chapter {
+  padding-top: 9.9rem;
+  padding-bottom: 18.6rem;
+
+  text-transform: uppercase;
+
+  @media (max-width: 49em) {
+    padding-top: 11.4rem;
+    padding-bottom: 24.2rem;
+  }
+
+  @media (max-width: 64em) and (min-width: 49.01em) {
+    padding-top: 11rem;
+
+    &::after {
+      content: '';
+
+      position: fixed;
+      bottom: 1.5rem;
+      left: 50%;
+
+      width: 102%;
+      height: 1.1rem;
+
+      background: url(@img/vectors/2131327217.svg) center / contain no-repeat;
+      background-repeat: repeat-x;
+
+      transform: translate(-50%, 50%);
+    }
+  }
+
+  // .team-chapter__container
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4.8rem;
+
+    @media (max-width: 49em) {
+      row-gap: 2rem;
+    }
+
+    @media (max-width: 64em) and (min-width: 49.01em) {
+      row-gap: 10rem;
+    }
+  }
+
+  // .team-chapter__title
+
+  &__title {
+    @media (max-width: 64em) and (min-width: 49.01em) {
+      letter-spacing: 0.3rem;
+    }
+  }
+
+  // .team-chapter__items
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 16.2rem;
+    row-gap: 9.1rem;
+
+    @media (max-width: 64em) and (min-width: 49.01em) {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 29rem;
+    }
+
+    @media (max-width: 49em) {
+      display: flex;
+      flex-direction: column;
+      row-gap: 7.5rem;
+    }
+
+    @media (max-width: 64em) and (min-width: 49.01em) {
+      row-gap: 10rem;
+    }
+  }
+
+  // .team-chapter__item
+
+  &__item {
+  }
+}
+
+.item-team-chapter {
+  // .item-team-chapter__inner
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .item-team-chapter__image-wrap
+
+  &__image-wrap {
+    margin-bottom: 1.2rem;
+
+    height: 61.5rem;
+    border-radius: 0.4rem;
+
+    background: linear-gradient(360deg, #001513 0%, #2bffe8 100%);
+
+    @media (max-width: 49em) {
+      margin-bottom: 9.4rem;
+
+      height: 96.4rem;
+      border-radius: 0.6rem;
+    }
+
+    @media (max-width: 64em) and (min-width: 49.01em) {
+      height: 60rem;
+    }
+  }
+
+  // .item-team-chapter__image
+
+  &__image {
+    height: 100%;
+    object-position: center top;
+    object-fit: cover;
+  }
+
+  // .item-team-chapter__title
+
+  &__title {
+    margin-bottom: 1.7rem;
+
+    @media (max-width: 49em) {
+      margin-bottom: 4.5rem;
+
+      line-height: 56%;
+    }
+  }
+
+  // .item-team-chapter__list
+
+  &__list {
+    margin: -0.6rem 0;
+
+    display: flex;
+    flex-direction: column;
+    order: 1;
+
+    @media (max-width: 49em) {
+      margin: -3rem 0;
+    }
+  }
+
+  // .item-team-chapter__item
+
+  &__item {
+    padding: 0.6rem 0;
+
+    display: grid;
+    grid-template-columns: 4fr auto;
+    align-items: start;
+    height: 3.3rem;
+
+    @media (max-width: 64em) and (min-width: 49.01em) {
+      height: 4rem;
+    }
+
+    &:not(:last-child) {
+      border-bottom: 0.5px solid var(--c-primary);
+    }
+
+    @media (max-width: 49em) {
+      padding: 3rem 0;
+
+      height: 9rem;
+
+      &:not(:last-child) {
+        border-bottom: 0.3px solid var(--c-primary);
+      }
+
+      &:last-child {
+        .item-team-chapter__txt {
+          transform: translateY(1rem);
+        }
+      }
+    }
+  }
+
+  // .item-team-chapter__txt
+
+  &__txt {
+    font-size: var(--fz-15-hf);
+    line-height: 1;
+    letter-spacing: 0.1rem;
+    margin-top: 0.3rem;
+
+    @media (max-width: 49em) {
+      margin-top: 0.45rem;
+      font-size: var(--fz-21-hf);
+      letter-spacing: 0.03rem;
+    }
+
+    @media (max-width: 64em) and (min-width: 49.01em) {
+      margin-top: 0.65rem;
+      font-size: 1.75rem;
+      letter-spacing: 0.2rem;
+    }
+  }
+
+  // .item-team-chapter__socials
+
+  &__socials {
+    display: flex;
+    column-gap: 2.2rem;
+
+    @media (max-width: 49em) {
+      column-gap: 3.1rem;
+    }
+
+    @media (max-width: 64em) and (min-width: 49.01em) {
+      column-gap: 3rem;
+    }
+  }
+
+  // .item-team-chapter__socials-item
+
+  &__socials-item {
+  }
+
+  // .item-team-chapter__socials-item-content
+
+  &__socials-item-content {
+    display: inline-flex;
+
+    svg {
+      width: 2.2rem;
+      height: 2rem;
+
+      @media (max-width: 49em) {
+        width: 3.6rem;
+        height: 3.6rem;
+      }
+    }
+  }
+}

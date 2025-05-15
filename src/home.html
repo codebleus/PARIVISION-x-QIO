@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" class="set-homepage-css">
+  @@include('html/_head.htm',{"title": "HOMEPAGE"})
+  <body>
+    @@include('html/_header.htm',{})
+    <div class="capsule">
+      <div class="wrapper">
+        <main class="main">
+          @@include('html/hero.htm',{}) @@include('html/about.htm',{})
+          @@include('html/team.htm',{}) @@include('html/leaders.htm',{})
+          @@include('html/teams.htm',{}) @@include('html/news.htm',{})
+          @@include('html/links.htm',{})
+        </main>
+        @@include('html/_preloader.htm',{})
+        @@include('html/_homepage-table.htm',{})
+        @@include('html/_footer.htm',{}) @@include('html/_svg.htm',{})
+      </div>
+    </div>
+
+    @@include('html/_js.htm',{})
+  </body>
+</html>

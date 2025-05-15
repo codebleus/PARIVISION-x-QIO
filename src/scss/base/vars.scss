@@ -1,0 +1,75 @@
+:root {
+  // colors
+  --c-primary: #2bffe8;
+  --c-bg: #000000;
+  --c-secondary: #00191b;
+
+  // font family
+  --ff-main: "Suisse Int'l";
+  --ff-heading: 'Heading Now';
+  --ff-mono: 'Aeonik Mono';
+  --ff-mono: 'Aeonik Mono';
+  --ff-numeric: 'Druk Text Cyr';
+
+  // font size
+  --fz-8-hf: 0.846rem;
+  --fz-13-hf: 1.357rem;
+  --fz-15-hf: 1.55rem;
+  --fz-16: 1.6rem;
+  --fz-16-hf: 1.692rem;
+  --fz-18-hf: 1.807rem;
+  --fz-19: 1.9rem;
+  --fz-21-hf: 2.134rem;
+  --fz-26: 2.6rem;
+  --fz-27-hf: 2.706rem;
+  --fz-36: 3.6rem;
+  --fz-39-hf: 3.974rem;
+  --fz-40-hf: 3.6rem;
+  --fz-50: 5rem;
+  --fz-56: 5.6rem;
+  --fz-61-hf: 6.082rem;
+  --fz-69: 6.9rem;
+  --fz-130-hf: 13.079rem;
+  --fz-158-hf: 15.859rem;
+  --fz-214: 21.4rem;
+  --fz-223-hf: 22.376rem;
+  --fz-337-hf: 33.727rem;
+
+  // typography
+  --txt-xs: 400 var(--fz-8-hf) / calc(100% + 0.4rem) var(--ff-heading);
+  --txt-s: 400 var(--fz-13-hf) / calc(100% + 0.4rem) var(--ff-heading);
+  --txt-medium-hf: 500 var(--fz-15-hf) / calc(100% + 0.4rem) var(--ff-main);
+  --txt-main: 400 var(--fz-16) / calc(100% + 0.4rem) var(--ff-main);
+  --txt-x: italic 800 var(--fz-69) / 82.1% var(--ff-heading);
+
+  --h-sm: 400 var(--fz-19) / 100% var(--ff-heading);
+  --h-x: italic 800 var(--fz-158-hf) / 82.1% var(--ff-heading);
+  --h-xxl: italic 800 var(--fz-337-hf) / 82.1% var(--ff-heading);
+
+  // svg
+  --i-arr-solid: url('data:image/svg+xml,<svg  viewBox="0 0 26 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.8731 22.3955L7.57807 9.20045L7.57738 9.19976L10.394 5.27948L24.5126 5.27189L25.9999 9.84164L16.3083 9.8444C16.0709 9.84578 15.841 9.87408 15.6229 9.92722C14.4793 10.2074 13.7422 11.28 13.8961 12.4471C13.9244 12.6645 13.9782 12.8826 14.061 13.0986L16.1916 19.6741L11.8731 22.3955ZM16.9359 -0.000461578L18.4232 4.56929L18.4226 4.5686L8.7309 4.57274C8.4921 4.57274 8.26296 4.60173 8.04416 4.65556C6.9019 4.93509 6.16409 6.00833 6.31731 7.17406C6.34561 7.39147 6.39944 7.60957 6.48226 7.8256L8.61426 14.4024L4.29505 17.1238L0 3.92879L2.81667 0.0085125L16.9359 -0.000461578Z" fill="%232BFFE8"/></svg>');
+  --i-border: url('data:image/svg+xml,<svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 13.5V5C1 2.79086 2.79086 1 5 1H13.5" stroke="%232BFFE8"/></svg>');
+  --i-arr: url('data:image/svg+xml,<svg viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.3536 4.85355C15.5488 4.65829 15.5488 4.34171 15.3536 4.14645L12.1716 0.964466C11.9763 0.769204 11.6597 0.769204 11.4645 0.964466C11.2692 1.15973 11.2692 1.47631 11.4645 1.67157L14.2929 4.5L11.4645 7.32843C11.2692 7.52369 11.2692 7.84027 11.4645 8.03553C11.6597 8.2308 11.9763 8.2308 12.1716 8.03553L15.3536 4.85355ZM0 5H15V4H0V5Z" fill="black"/></svg>');
+  --i-arr-blue: url('data:image/svg+xml,<svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.3536 4.85355C15.5488 4.65829 15.5488 4.34171 15.3536 4.14645L12.1716 0.964466C11.9763 0.769204 11.6597 0.769204 11.4645 0.964466C11.2692 1.15973 11.2692 1.47631 11.4645 1.67157L14.2929 4.5L11.4645 7.32843C11.2692 7.52369 11.2692 7.84027 11.4645 8.03553C11.6597 8.2308 11.9763 8.2308 12.1716 8.03553L15.3536 4.85355ZM0 5H15V4H0V5Z" fill="%232BFFE8"/></svg>');
+  --i-arr-sm: url('data:image/svg+xml,<svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.2891 4.85355C10.4844 4.65829 10.4844 4.34171 10.2891 4.14645L7.10715 0.964466C6.91189 0.769204 6.59531 0.769204 6.40004 0.964466C6.20478 1.15973 6.20478 1.47631 6.40004 1.67157L9.22847 4.5L6.40004 7.32843C6.20478 7.52369 6.20478 7.84027 6.40004 8.03553C6.59531 8.2308 6.91189 8.2308 7.10715 8.03553L10.2891 4.85355ZM3.31379e-08 5L9.93558 5V4L-3.31379e-08 4L3.31379e-08 5Z" fill="%232BFFE8"/></svg>');
+  --i-crosses: url('data:image/svg+xml,<svg viewBox="0 0 8 124" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.80933 115.419V123.038" stroke="%232BFFE8" stroke-width="2.68735"/><path d="M0.000244141 119.229L7.61886 119.229" stroke="%232BFFE8" stroke-width="2.68735"/><path d="M3.80933 0.962402V8.58101" stroke="%232BFFE8" stroke-width="2.68735"/><path d="M0 4.77173L7.61861 4.77173" stroke="%232BFFE8" stroke-width="2.68735"/></svg>');
+  --i-angle-arr: url('data:image/svg+xml,<svg viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.36523 20.8638L8.36523 12.3638C8.36523 10.1546 10.1561 8.36377 12.3652 8.36377L20.8652 8.36377" stroke="%232BFFE8" stroke-width="4"/><path d="M2 14.5L2 6C2 3.79086 3.79086 2 6 2L14.5 2" stroke="%232BFFE8" stroke-width="4"/></svg>');
+  --i-arr-sm-blue: url('data:image/svg+xml,<svg  viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 18.1241V4.68735C2 3.20317 3.20317 2 4.68735 2H18.1241" stroke="%232BFFE8" stroke-width="2.68735"/></svg>');
+
+  @media (max-width: 64em) and (min-width: 49.01em) {
+    --txt-x: italic 800 var(--fz-50) / 82.1% var(--ff-heading);
+    --txt-s: 400 var(--fz-16) / calc(100% + 0.4rem) var(--ff-heading);
+    --h-xxl: italic 800 var(--fz-214) / 82.1% var(--ff-heading);
+  }
+
+  @media (max-width: 49em) {
+    --txt-xs: 400 var(--fz-16-hf) / calc(100% + 0.4rem) var(--ff-heading);
+    --txt-s: 400 var(--fz-21-hf) / calc(100% + 0.4rem) var(--ff-heading);
+    --txt-medium-hf: 400 var(--fz-21-hf) / calc(100% + 0.4rem) var(--ff-main);
+    --txt-x: italic 800 var(--fz-61-hf) / 82.1% var(--ff-heading);
+
+    --h-sm: 400 var(--fz-26) / 100% var(--ff-heading);
+    --h-x: italic 800 var(--fz-130-hf) / 82.1% var(--ff-heading);
+    --h-xxl: italic 800 var(--fz-223-hf) / 82.1% var(--ff-heading);
+  }
+}

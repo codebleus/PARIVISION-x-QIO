@@ -1,0 +1,76 @@
+<head>
+  <title>@@title</title>
+  <meta charset="UTF-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="shortcut icon" href="favicon.ico" />
+  <!-- <meta name="robots" content="noindex, nofollow"> -->
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+
+  <!-- critical js -->
+  <script>
+    document.fonts.ready.then(function () {
+      const e = document.getElementById('loader-time');
+      if (e) {
+        setInterval(function () {
+          const n = new Date();
+          let t = n.getHours(),
+            o = n.getMinutes(),
+            l = n.getSeconds();
+          t < 10 && (t = '0' + t),
+            o < 10 && (o = '0' + o),
+            l < 10 && (l = '0' + l),
+            (e.innerHTML = `${t + ':'}${o + ':'}${l}`);
+        }, 500);
+      }
+      const n = document.querySelectorAll('.preloader__progress');
+      if (n.length) {
+        for (let e = 0; e < n.length; e++) {
+          const t = n[e];
+          let o = 0,
+            l = setInterval(function () {
+              (t.innerHTML = ++o), o >= 99 && clearInterval(l);
+            }, 10);
+        }
+      }
+    }),
+      (document.fonts.onloadingdone = function (e) {
+        document.documentElement.classList.add('_fonts-loaded');
+      });
+  </script>
+
+  <!-- critical css  -->
+  <style>
+    html::before {
+      content: '';
+
+      position: fixed;
+      z-index: 2;
+      inset: 0;
+
+      background-image: url(@img/vectors/bg.svg);
+      background-position: center var(--y);
+      background-size: contain;
+      background-repeat: repeat;
+    }
+
+    ._fonts-loaded .preloader__container {
+      opacity: 1;
+      filter: blur(0);
+      transform: translateY(0);
+    }
+    @media (max-width: 49em) {
+      html::before {
+        background-image: url(@img/vectors/bg-m.svg);
+      }
+    }
+  </style>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link
+    rel="preload"
+    href="https://unpkg.com/lenis@1.2.3/dist/lenis.css"
+    as="style"
+    onload="this.rel='stylesheet'" />
+</head>

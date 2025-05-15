@@ -1,0 +1,135 @@
+.other {
+  margin-bottom: 1.4rem;
+
+  @media (max-width: 64em) and (min-width: 49.01em) {
+    margin-bottom: 11rem;
+  }
+
+  @media (max-width: 49em) {
+    margin-bottom: 19rem;
+  }
+
+  .news-card {
+    @media (max-width: 64em) and (min-width: 49.01em) {
+      width: 55rem !important;
+    }
+    @media (max-width: 49em) {
+      width: 100% !important;
+    }
+    &__content {
+      min-height: 35.3rem;
+
+      @media (max-width: 64em) and (min-width: 49.01em) {
+        padding: 3rem 2rem;
+        min-height: 40.3rem;
+      }
+
+      @media (max-width: 49em) {
+        min-height: 32.8rem;
+        padding-bottom: 0.5rem;
+      }
+    }
+    &__heading {
+      @media (max-width: 64em) and (min-width: 49.01em) {
+        font-size: 2.1rem;
+        letter-spacing: 0.15rem;
+        max-width: 36.2rem;
+      }
+      @media (max-width: 49em) {
+        font-size: 2.6rem;
+        max-width: 47.8rem;
+      }
+    }
+  }
+
+  // .other__container
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 7.6rem;
+
+    @media (max-width: 64em) and (min-width: 49.01em) {
+      row-gap: 10.6rem;
+    }
+
+    @media (max-width: 49em) {
+      margin-bottom: 12.6rem;
+      row-gap: 12.6rem;
+    }
+  }
+
+  // .other__heading
+
+  &__heading {
+    &.screen-heading {
+      padding-left: 1.3rem;
+
+      @media (max-width: 49em) {
+        padding-left: 0;
+        margin-top: -0.6rem;
+        letter-spacing: 0.15rem;
+      }
+    }
+  }
+
+  // .other__carousel
+
+  &__carousel {
+    display: flex;
+    align-items: center;
+    column-gap: 4.6rem;
+  }
+
+  // .other__controls-btn
+
+  &__controls-btn {
+    margin-top: 1rem;
+    @media (max-width: 64em) {
+      display: none;
+    }
+    svg {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    // .other__controls-btn_prev
+
+    &_prev {
+      transform: scaleX(-1);
+    }
+
+    // .other__controls-btn_next
+
+    &_next {
+    }
+  }
+
+  // .other__slider
+
+  &__slider {
+    flex: 1 1 auto;
+  }
+
+  // .other__wrapper
+
+  &__wrapper {
+    &.swiper-wrapper {
+      @media (max-width: 64em) and (min-width: 49.01em) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 15rem;
+      }
+      @media (max-width: 49em) {
+        display: flex;
+        flex-direction: column;
+        row-gap: 13.7rem;
+      }
+    }
+  }
+
+  // .other__slide
+
+  &__slide {
+  }
+}

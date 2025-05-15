@@ -1,0 +1,29 @@
+<header class="header">
+  <div class="header__container container">
+    <a href="/" class="header__logo"
+      ><img src="@img/logo.svg" class="header__logo-img" alt=""
+    /></a>
+    <span id="section-heading" class="header__heading h-x">MAIN</span>
+    <ul class="header__lang">
+      <li class="header__lang-item">
+        <input type="radio" name="page-lang" class="header__lang-item-inp" />
+        <span class="header__lang-item-txt">RU</span>
+      </li>
+      <li class="header__lang-item">
+        <input
+          checked
+          type="radio"
+          name="page-lang"
+          class="header__lang-item-inp" />
+        <span class="header__lang-item-txt">EN</span>
+      </li>
+    </ul>
+    <nav class="header__nav">
+      <!-- <a href="#" class="header__nav-item">LOGIN</a>
+      <a href="#" class="header__nav-item">SHOP</a>
+      <a href="#" class="header__nav-item">CART</a> -->
+    </nav>
+    <button type="button" class="header__menu-btn">MENU</button>
+  </div>
+  @@include('/_menu.htm',{})
+</header>

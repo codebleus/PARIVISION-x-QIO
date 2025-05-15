@@ -1,0 +1,278 @@
+.media {
+  padding-top: 9.9rem;
+  padding-bottom: 18.5rem;
+
+  text-transform: uppercase;
+
+  @media (max-width: 49em) {
+    padding-top: 12.5rem;
+    padding-bottom: 31rem;
+  }
+
+  .news-card {
+    overflow: hidden;
+
+    &__content {
+      min-height: 34.9rem;
+
+      @media (max-width: 49em) {
+        min-height: 34.6rem;
+      }
+    }
+  }
+
+  .news-card__image-wrap {
+    &::before {
+      content: '';
+
+      position: absolute;
+
+      width: 73.6rem;
+      height: 93.1rem;
+
+      background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 38.92%,
+        #000000 63.88%
+      );
+      mix-blend-mode: normal;
+
+      transform: translate(-12rem, -24rem);
+
+      @media (max-width: 49em) {
+        width: 100%;
+        transform: none;
+      }
+    }
+  }
+
+  // .media__container
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .media__title
+
+  &__title {
+    margin-bottom: 4.8rem;
+
+    @media (max-width: 49em) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  // .media__head
+
+  &__head {
+    margin-bottom: 9.8rem;
+
+    @media (max-width: 49em) {
+      margin-bottom: 13.4rem;
+    }
+  }
+
+  // .media__body
+
+  &__body {
+    margin-bottom: 3.1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 3.8rem;
+
+    @media (max-width: 49em) {
+      margin-bottom: 3.6rem;
+
+      row-gap: 4.4rem;
+    }
+  }
+
+  // .media__list
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 8.7rem;
+    row-gap: 9.5rem;
+    width: 174.6rem;
+
+    @media (max-width: 49em) {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      row-gap: 11.6rem;
+    }
+  }
+
+  // .media__item
+
+  &__item {
+  }
+
+  // .media__controls
+
+  &__controls {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 7.8rem;
+
+    @media (max-width: 49em) {
+      column-gap: 9.6rem;
+    }
+  }
+
+  // .media__controls-btn
+
+  &__controls-btn {
+    display: inline-flex;
+
+    svg {
+      width: 1.8rem;
+      height: 1.8rem;
+
+      @media (max-width: 49em) {
+        width: 2rem;
+        height: 2.4rem;
+      }
+    }
+
+    // .media__controls-btn_prev
+
+    &_prev {
+      transform: rotate(180deg);
+    }
+
+    // .media__controls-btn_next
+
+    &_next {
+    }
+  }
+
+  // .media__fraction
+
+  &__fraction {
+  }
+
+  // .media__fraction-txt
+
+  &__fraction-txt {
+    &:first-child {
+      margin-right: -0.4rem;
+
+      &::after {
+        content: '//';
+      }
+    }
+  }
+
+  // .media__lower-heading
+
+  &__lower-heading {
+    font: var(--h-xxl);
+    text-align: center;
+    letter-spacing: 0.6rem;
+
+    @media (max-width: 49em) {
+      letter-spacing: 0.5rem;
+      text-align: right;
+      line-height: 79%;
+    }
+  }
+}
+
+.head-media {
+  overflow: hidden;
+
+  // .head-media__inner
+
+  &__inner {
+    position: relative;
+
+    display: flex;
+  }
+
+  // .head-media__content
+
+  &__content {
+    position: relative;
+    z-index: 2;
+
+    padding-bottom: 1.4rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70.5rem;
+    width: 100%;
+
+    @media (max-width: 49em) {
+      padding-bottom: 1.2rem;
+
+      height: 56rem;
+    }
+  }
+
+  // .head-media__title
+
+  &__title {
+    margin-top: auto;
+
+    font-size: 4.9rem;
+    font-family: var(--ff-heading);
+    line-height: 100%;
+
+    @media (max-width: 49em) {
+      font-size: 5.8rem;
+    }
+  }
+
+  // .head-media__link
+
+  &__link {
+    margin-top: auto;
+  }
+
+  // .head-media__bg
+
+  &__bg {
+    position: absolute;
+    inset: 0;
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      inset: 0;
+
+      width: 192.7rem;
+      height: 240.9rem;
+
+      transform: translateY(-61rem);
+
+      background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 44.36%,
+        rgba(0, 0, 0, 0.7) 51.53%
+      );
+    }
+  }
+
+  // .head-media__bg-image
+
+  &__bg-image {
+    height: 100%;
+
+    object-fit: cover;
+  }
+}
+[data-page='media'] {
+  .container {
+    @media (max-width: 49em) {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+}

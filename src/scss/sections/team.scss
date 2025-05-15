@@ -1,0 +1,136 @@
+.team {
+  // .team__container
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 12.2rem;
+
+    &.container {
+      padding-top: 0.2rem;
+    }
+
+    @media (max-width: 64em) and (min-width: 49.01em) {
+      &.container {
+        padding-bottom: 13.6vh;
+      }
+
+      justify-content: flex-end;
+      row-gap: 10.2rem;
+    }
+
+    @media (max-width: 49em) {
+      justify-content: space-between;
+
+      &.container {
+        padding-top: 24rem;
+        padding-bottom: 24rem;
+      }
+    }
+  }
+
+  // .team__text-wrap
+
+  &__text-wrap {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 49em) {
+      &._desktop-only {
+        display: none;
+      }
+    }
+  }
+
+  // .team__txt
+
+  &__txt {
+    max-width: 50.1rem;
+
+    .set-homepage-css & {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+
+    @media (min-width: 49.01em) {
+      max-width: 29.9rem;
+    }
+
+    @media (min-width: 64.01em) {
+      &:first-child:last-child {
+        margin-left: auto;
+      }
+    }
+
+    @media (max-width: 64em) and (min-width: 49.01em) {
+      &:first-child {
+        padding-bottom: 1rem;
+      }
+
+      max-width: 35.9rem;
+    }
+
+    @media (max-width: 49em) {
+      line-height: 131%;
+    }
+  }
+
+  // .team__heading
+
+  &__heading {
+    padding-right: 1.5rem;
+
+    display: flex;
+    justify-content: space-between;
+
+    span {
+      .set-homepage-css & {
+        @extend %ob-t;
+      }
+    }
+
+    @media (max-width: 49em) {
+      margin: 0 auto;
+      padding-right: 0;
+
+      flex-direction: column;
+      row-gap: 1.2rem;
+      max-width: 86rem;
+      width: inherit;
+
+      span:last-child:not(:first-child) {
+        margin-left: auto;
+        margin-right: 0.7rem;
+      }
+    }
+  }
+}
+
+#homepage-video-1 {
+  transition: height 1s ease-in-out;
+  @media (max-width: 64em) and (min-width: 49.01em) {
+    &:not([data-current-section='about'] &) {
+      height: 87%;
+
+      &::after {
+        content: '';
+
+        position: absolute;
+        bottom: -8rem;
+        left: 0;
+
+        height: 55rem;
+        width: 100%;
+
+        background: linear-gradient(
+          360deg,
+          rgba(0, 0, 0, 0) 0%,
+          #000000 78.16%
+        );
+        filter: blur(13.5px);
+        transform: rotate(-180deg);
+      }
+    }
+  }
+}

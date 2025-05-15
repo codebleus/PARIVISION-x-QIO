@@ -1,0 +1,512 @@
+.homepage-table {
+  position: fixed;
+  z-index: 3;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+
+  .frame-btn {
+    margin: 0 auto;
+
+    @media (min-width: 64.01em) {
+      &.homepage-table__btn_news {
+        .border {
+          width: 155.5%;
+        }
+      }
+      &.homepage-table__btn_leaders {
+        .frame-btn__txt {
+          padding: 0.9rem 3.3rem;
+        }
+        .border {
+          width: 157.5%;
+        }
+      }
+    }
+
+    @media (max-width: 64em) and (min-width: 49.01em) {
+      margin-bottom: 4rem;
+
+      .frame-btn__txt {
+        padding: 0.3rem 1rem;
+
+        [data-current-section='teams'] & {
+          padding: 0.3rem 3.5rem;
+        }
+        [data-current-section='news'] & {
+          padding: 0.3rem 4rem;
+        }
+      }
+
+      .border {
+        top: 60%;
+
+        width: 226.5%;
+        height: 120%;
+      }
+    }
+  }
+
+  &._is-hidden {
+    pointer-events: none;
+
+    &::after {
+      opacity: 0;
+    }
+  }
+
+  .set-homepage-css & {
+    @extend %blur;
+  }
+
+  @media (max-width: 49em) {
+    height: 20.4rem;
+  }
+
+  // .homepage-table__container
+
+  &__container {
+    display: flex;
+    justify-content: center;
+
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+
+    ._is-hidden &,
+    [data-current-section='links'] & {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    @media (min-width: 64.01em) {
+      display: grid;
+      grid-template-columns: 11.9fr 9fr 4fr;
+      align-items: end;
+
+      [data-table-section] & {
+        grid-template-columns: 10fr 5fr 10fr;
+      }
+
+      &.container {
+        padding-bottom: 1.2rem;
+      }
+    }
+  }
+
+  // .homepage-table__bullets
+
+  &__bullets {
+    display: flex;
+    align-items: flex-end;
+
+    @media (max-width: 64em) {
+      display: none;
+    }
+  }
+
+  // .homepage-table__bullet
+
+  &__bullet {
+    flex: 0 0 0.8rem;
+    width: 0.8rem;
+    height: 2.1rem;
+    border: 1px solid var(--c-primary);
+    border-radius: 0.2rem;
+
+    transition: height 0.4s ease-in-out, background-color 0.4s ease-in-out;
+
+    &:first-child {
+      margin-right: 6rem;
+    }
+
+    &:not(:last-child, :first-child) {
+      margin-right: 6.8rem;
+    }
+
+    &._is-active {
+      height: 6.4rem;
+
+      background-color: var(--c-primary);
+
+      pointer-events: none;
+    }
+  }
+
+  // .homepage-table__btn
+
+  &__btn {
+    &.frame-btn {
+      display: none;
+
+      [data-table-section='teams'] & {
+        &.homepage-table__btn_teams {
+          display: inline-flex;
+        }
+      }
+      [data-table-section='leaders'] & {
+        &.homepage-table__btn_leaders {
+          display: inline-flex;
+        }
+      }
+      [data-table-section='news'] & {
+        &.homepage-table__btn_news {
+          display: inline-flex;
+        }
+      }
+      [data-table-section='contacts'] & {
+        &.homepage-table__btn_contacts {
+          display: inline-flex;
+        }
+      }
+    }
+  }
+
+  // .homepage-table__info
+
+  &__info {
+    padding-bottom: 0.6rem;
+
+    display: flex;
+
+    [data-table-section] & {
+      display: none;
+    }
+  }
+
+  // .homepage-table__info-txt
+
+  &__info-txt {
+    font: var(--txt-main);
+    letter-spacing: -0.02rem;
+
+    @media (min-width: 49.01em) {
+      display: flex;
+      white-space: nowrap;
+    }
+  }
+
+  // .homepage-table__list
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+
+    @media (max-width: 64em) and (min-width: 49.01em) {
+      padding-bottom: 3rem;
+
+      [data-current-section='leaders'] &,
+      [data-current-section='teams'] &,
+      [data-current-section='news'] &,
+      [data-current-section='links'] & {
+        // display: none;
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
+    @media (max-width: 64em) {
+      position: absolute;
+      z-index: 10;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @media (min-width: 64.01em) {
+      &:not([data-page='schedule'] &) {
+        margin-left: auto;
+      }
+
+      width: 30rem;
+    }
+
+    @media (max-width: 49em) {
+      width: 95%;
+
+      [data-table-section] & {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  }
+
+  // .homepage-table__list-item
+
+  &__list-item {
+    --mb: -6rem;
+    --opacity: 0;
+    --scale: 0.8;
+
+    &:not(:last-child, .homepage-table__sublist &),
+    &_sublist {
+      margin-bottom: var(--mb);
+      opacity: var(--opacity);
+      transform: scale(var(--scale));
+    }
+
+    &_all {
+      .header__sort-list & {
+        --mb: 0;
+        --opacity: 1;
+        --scale: 1;
+      }
+    }
+  }
+}
+.homepage-table,
+.sort {
+  @media (max-width: 64em) {
+    &::after {
+      content: '';
+
+      position: absolute;
+      bottom: 1.5rem;
+      left: 50%;
+
+      width: 102%;
+      height: 1.1rem;
+
+      background: url(@img/vectors/2131327217.svg) center / contain no-repeat;
+      background-repeat: repeat-x;
+
+      transform: translate(-50%, 50%);
+    }
+  }
+  @media (max-width: 49em) {
+    padding-bottom: 1rem;
+
+    bottom: 4rem;
+
+    &::after {
+      bottom: -2rem;
+
+      height: 2.5rem;
+
+      background: url(@img/vectors/2131327207.svg) center / contain no-repeat;
+    }
+  }
+}
+
+.list-item-homepage-table {
+  &:first-child:not(:last-child) {
+    .list-item-homepage-table {
+      &__heading {
+        text-transform: uppercase;
+      }
+      &__info {
+        align-items: center;
+        width: 100%;
+
+        text-align: center;
+      }
+    }
+  }
+  &:last-child {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__icon-img {
+    height: 3rem;
+
+    @media (max-width: 64em) and (min-width: 49.01em) {
+      height: 4rem;
+    }
+
+    @media (max-width: 49em) {
+      height: 6rem;
+    }
+  }
+
+  // .list-item-homepage-table__inner
+
+  &__inner {
+    position: relative;
+
+    padding: 1.5rem 1.9rem;
+
+    justify-content: space-between;
+    --alpha: 0;
+
+    @media (max-width: 49em) {
+      padding: 2.6rem 3.8rem;
+    }
+
+    @media (max-width: 64em) and (min-width: 49.01em) {
+      padding: 2rem 1.9rem;
+      min-width: 46rem;
+    }
+
+    @media (min-width: 49.01em) {
+      &:not(.homepage-table__list-item_all &, [data-page='schedule'] &) {
+        padding-right: 2.4rem;
+      }
+    }
+  }
+
+  // .list-item-homepage-table__info
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.1rem;
+
+    @media (max-width: 49em) {
+      row-gap: 0.8rem;
+      align-items: center;
+
+      text-align: center;
+    }
+    // @media (max-width: 64em) {
+    //   display: none;
+    // }
+    .header__sort-list & {
+      text-transform: uppercase;
+      text-align: center;
+
+      &._active-only {
+        display: none;
+      }
+
+      @media (max-width: 49em) {
+        ._show-sort & {
+          display: none;
+
+          &._active-only {
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+
+  &__input {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    appearance: none;
+
+    + .list-item-homepage-table__heading {
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        pointer-events: none;
+        opacity: var(--alpha);
+        @media (max-width: 49em) {
+          .header__sort-list & {
+            background-color: rgba(0, 0, 0, 0.6);
+          }
+        }
+      }
+    }
+  }
+
+  // .list-item-homepage-table__heading
+
+  &__heading {
+    text-transform: uppercase;
+    &.txt-s {
+      font-family: var(--ff-main);
+      font-weight: 500;
+
+      @media (max-width: 49em) {
+        font-size: var(--fz-27-hf);
+      }
+    }
+  }
+
+  // .list-item-homepage-table__txt
+
+  &__txt {
+    color: rgba(0, 0, 0, 0.4);
+    font-family: 'Aeonik Mono';
+
+    @media (max-width: 49em) {
+      font-size: var(--fz-13-hf);
+    }
+  }
+
+  // .list-item-homepage-table__icon
+
+  &__icon {
+    flex: 0 0 2rem;
+    width: 2rem;
+
+    @media (max-width: 49em) {
+      flex: 0 0 4rem;
+      width: 4rem;
+    }
+  }
+
+  // .list-item-homepage-table__icon-img
+
+  &__icon-img {
+    mix-blend-mode: darken;
+  }
+
+  // .list-item-homepage-table__group
+
+  &__group {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 0.4rem;
+  }
+
+  // .list-item-homepage-table__group-icon
+
+  &__group-icon {
+    flex: 0 0 1.6rem;
+    width: 1.6rem;
+    height: 1.5rem;
+
+    @media (max-width: 49em) {
+      display: none;
+    }
+
+    @media (max-width: 64em) and (min-width: 49.01em) {
+      display: none;
+    }
+  }
+
+  // .list-item-homepage-table__group-txt
+
+  &__group-txt {
+    font-size: var(--fz-18-hf);
+    font-family: var(--ff-numeric);
+    letter-spacing: -0.1rem;
+    font-weight: 500;
+
+    @media (max-width: 49em) {
+      font-size: var(--fz-36);
+    }
+  }
+}
+[data-page='schedule']
+  .homepage-table__list-item:not(.homepage-table__list-item_all)
+  .list-item-homepage-table__heading,
+.list-item-homepage-table__inner {
+  display: flex;
+  align-items: center;
+  border-radius: 0.6rem;
+
+  color: var(--c-bg);
+
+  background-color: var(--c-primary);
+
+  @media (max-width: 49em) {
+    border-radius: 0.8rem;
+  }
+}

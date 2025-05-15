@@ -1,0 +1,172 @@
+.achievements {
+  padding-bottom: 42.4rem;
+
+  @media (max-width: 64em) and (min-width: 49.01em) {
+    padding-bottom: 17rem;
+  }
+
+  @media (max-width: 49em) {
+    padding-bottom: 25.4rem;
+  }
+
+  &__heading {
+    @media (min-width: 64.01em) {
+      padding-left: 1rem;
+    }
+    @media (max-width: 64em) and (min-width: 49.01em) {
+      &.screen-heading {
+        letter-spacing: 0.17rem;
+      }
+    }
+    @media (max-width: 49em) {
+      &.screen-heading {
+        letter-spacing: 0.15rem;
+      }
+    }
+  }
+  // .achievements__container
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 14rem;
+
+    @media (max-width: 64em) and (min-width: 49.01em) {
+      row-gap: 11rem;
+    }
+
+    @media (max-width: 49em) {
+      row-gap: 12.3rem;
+    }
+  }
+
+  // .achievements__list
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    column-gap: 24.6rem;
+    row-gap: 3rem;
+
+    @media (min-width: 64.01em) {
+      padding-left: 0.7rem;
+      letter-spacing: 0.1rem;
+    }
+
+    @media (max-width: 64em) and (min-width: 49.01em) {
+      column-gap: 0.8rem;
+    }
+
+    @media (max-width: 49em) {
+      display: flex;
+      flex-direction: column;
+      row-gap: 9.4rem;
+      transform: translateX(-1rem);
+    }
+  }
+
+  // .achievements__item
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5rem;
+
+    @media (max-width: 49em) {
+      row-gap: 3.6rem;
+    }
+
+    @media (max-width: 64em) and (min-width: 49.01em) {
+      row-gap: 4rem;
+
+      &:nth-child(2) {
+        transform: translateY(-0.4rem);
+      }
+    }
+  }
+
+  // .achievements__subtitle
+
+  &__subtitle,
+  &__list-txt {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.23rem;
+
+    @media (max-width: 64em) and (min-width: 49.01em) {
+      font-size: 1.6rem;
+    }
+
+    @media (max-width: 64em) {
+      letter-spacing: 0.1rem;
+    }
+
+    @media (max-width: 49em) {
+      font-size: 2rem;
+    }
+  }
+
+  // .achievements__sublist
+
+  &__sublist {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 79rem;
+    row-gap: 1rem;
+
+    @media (max-width: 64em) and (min-width: 49.01em) {
+      row-gap: 0.2rem;
+    }
+
+    @media (max-width: 49em) {
+      row-gap: 0.1rem;
+    }
+  }
+
+  // .achievements__sublist-item
+
+  &__sublist-item {
+    margin-right: auto;
+  }
+
+  // .achievements__list-txt
+
+  &__list-txt {
+  }
+}
+[data-page='player'] .lower-info {
+  .frame-btn__inner {
+    height: 7.3rem;
+  }
+  .frame-btn__txt {
+    padding: 1.2rem 5rem;
+
+    @media (max-width: 64em) and (min-width: 49.01em) {
+      padding: 0.9rem 3rem;
+    }
+  }
+  .border {
+    top: 54%;
+    width: 153.5%;
+    height: 128%;
+
+    @media (max-width: 64em) and (min-width: 49.01em) {
+      width: 223.5%;
+    }
+  }
+}
+.lower__btn {
+  min-width: 30rem;
+  height: 5.9rem;
+
+  position: absolute;
+  left: 50%;
+  top: 1.4rem;
+  transform: translateX(-50%);
+
+  @media (max-width: 64em) {
+    display: none;
+  }
+}

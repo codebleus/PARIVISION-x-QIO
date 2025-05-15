@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/_head.htm',{"title": "TEAMS"})
+  <body>
+    @@include('html/_header.htm',{})
+    <div class="capsule">
+      <div class="wrapper">
+        <main class="main">
+          <section data-section="teams" class="teams fw">
+            <div class="teams__container container">
+              <ul class="teams__list">
+                <li class="teams__item item-teams border">
+                  <div class="item-teams__content border__inner">
+                    <a href="#" class="item-teams__inner">
+                      <div class="item-teams__logo">
+                        <svg><use href="#cs2-svg"></use></svg>
+                      </div>
+                    </a>
+                  </div>
+                </li>
+                <li class="teams__item item-teams border">
+                  <div class="item-teams__content border__inner">
+                    <a href="#" class="item-teams__inner">
+                      <div class="item-teams__cover">
+                        <div class="item-teams__logo">
+                          <img
+                            src="@img/logos/wot.svg"
+                            alt=""
+                            class="item-teams__logo-img _desktop-only" />
+                          <img
+                            src="@img/logos/wot-m.svg"
+                            alt=""
+                            class="item-teams__logo-img _mobile-only" />
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </li>
+                <li class="teams__item item-teams border">
+                  <div class="item-teams__content border__inner">
+                    <a href="#" class="item-teams__inner">
+                      <div class="item-teams__cover">
+                        <div class="item-teams__logo">
+                          <svg
+                            style="
+                              mask: url(@img/logos/dota2.png);
+                              mask-repeat: no-repeat;
+                              mask-size: 100%;
+                            ">
+                            <use href="#dota2-svg"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <div class="lower-info">
+            <a
+              href="#"
+              class="lower-info__btn lower-info__btn_members frame-btn">
+              <span class="frame-btn__inner">
+                <span class="frame-btn__txt">GO TO MEMBERS</span>
+              </span>
+              <span class="border"><span class="border__inner"></span></span>
+            </a>
+          </div>
+        </main>
+
+        @@include('html/_preloader.htm',{}) @@include('html/_footer.htm',{})
+        @@include('html/_svg.htm',{})
+      </div>
+    </div>
+
+    @@include('html/_js.htm',{})
+  </body>
+</html>
