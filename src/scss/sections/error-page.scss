@@ -1,0 +1,88 @@
+.error-page {
+  // .error-page__container
+
+  &__container {
+    &.container {
+      padding-bottom: 8.8dvh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 100dvh;
+
+      @media (max-width: 64em) and (min-width: 49.01em) {
+        padding-bottom: 8.5dvh;
+      }
+      @media (max-width: 49em) {
+        padding-bottom: 7dvh;
+      }
+    }
+  }
+
+  // .error-page__heading
+
+  &__heading {
+    margin-bottom: 4.5rem;
+    margin-right: 2rem;
+    font-family: 'Druk Text Cyr';
+    font-style: italic;
+    font-size: 9rem;
+    @media (max-width: 64em) and (min-width: 49.01em) {
+      margin-bottom: 5rem;
+    }
+    @media (max-width: 49em) {
+      margin-bottom: 5rem;
+      font-size: 12rem;
+    }
+  }
+
+  // .error-page__txt
+
+  &__txt {
+    margin-bottom: 2.6rem;
+    font: var(--txt-medium-hf);
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    @media (max-width: 64em) and (min-width: 49.01em) {
+      margin-bottom: 4.6rem;
+      font-size: 1.9rem;
+    }
+    @media (max-width: 49em) {
+      margin-bottom: 5.4rem;
+      margin-right: 1.4rem;
+    }
+  }
+
+  &__btn {
+    &.frame-btn {
+      transform: translateY(0.5dvh);
+
+      .frame-btn__inner {
+        height: 7.9rem;
+      }
+      .frame-btn__txt {
+        padding: 1.2rem 2rem;
+        min-width: 24rem;
+        @media (max-width: 64em) and (min-width: 49.01em) {
+          padding: 1.5rem 2rem;
+          min-width: 28rem;
+        }
+        @media (max-width: 49em) {
+          padding: 2.5rem 2rem;
+          min-width: 26rem;
+        }
+      }
+      .border {
+        width: 159.5%;
+        @media (max-width: 64em) and (min-width: 49.01em) {
+          height: 113%;
+        }
+        @media (max-width: 49em) {
+          width: 56.5%;
+          height: 128%;
+        }
+      }
+    }
+  }
+}

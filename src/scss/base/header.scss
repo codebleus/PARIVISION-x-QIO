@@ -244,6 +244,10 @@
 
     opacity: 0;
 
+    [data-page='error page'] & {
+      display: none;
+    }
+
     .gallery-page & {
       @media (max-width: 64em) and (min-width: 49.01em) {
         padding-top: 2rem;
@@ -380,6 +384,10 @@
     line-height: 1;
 
     border-radius: 0.4rem;
+
+    [data-page='error page'] & {
+      margin-left: auto;
+    }
 
     @media (min-width: 64.01em) {
       [data-page='schedule'] & {
