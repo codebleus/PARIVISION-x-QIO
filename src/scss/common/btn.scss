@@ -13,6 +13,21 @@
     }
   }
 
+  &_black {
+    .border {
+      &::before,
+      &::after,
+      &__inner::before,
+      &__inner::after {
+        content: var(--i-border-black);
+      }
+    }
+    .frame-btn__txt {
+      color: var(--c-primary);
+      background-color: var(--c-bg);
+    }
+  }
+
   .border {
     position: absolute;
     left: 50%;

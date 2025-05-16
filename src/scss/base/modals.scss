@@ -1,4 +1,4 @@
-body::after {
+.wrapper::after {
   content: '';
   position: fixed;
   z-index: 100;
@@ -24,6 +24,7 @@ body::after {
 
 .modal {
   position: fixed;
+  z-index: 101;
   top: 0;
   left: 0;
   bottom: 0;
@@ -31,14 +32,19 @@ body::after {
 
   padding: 3rem 2.4rem;
 
+  opacity: 0;
   visibility: hidden;
   pointer-events: none;
 
-  transition: visibility 0.8s ease 0s;
+  transition: visibility 0.8s ease 0s, opacity 0.8s ease 0s;
+
+  @media (max-width: 49em) {
+    padding: 1.8rem;
+    padding-bottom: 3.5rem;
+  }
 
   &.modal_show {
-    z-index: 101;
-
+    opacity: 1;
     visibility: visible;
     overflow: auto;
 
@@ -52,49 +58,198 @@ body::after {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex: 1 1 auto;
 
     width: 100%;
     min-height: 100%;
+    @media (max-width: 49em) {
+      justify-content: flex-end;
+    }
+    @media (min-width: 49.01em) {
+      padding-top: 6.4rem;
+    }
   }
 
   // .modal__content
 
   &__content {
+    @media (max-width: 49em) {
+      width: 100%;
+    }
   }
 
   // .modal__body
 
   &__body {
+    position: relative;
+    display: flex;
+    width: 68.8rem;
+    border-radius: 0.4rem;
+    overflow: hidden;
+    background-color: var(--c-bg);
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: var(--c-primary);
+      clip-path: url(#f-3svg);
+    }
+    @media (max-width: 64em) and (min-width: 49.01em) {
+      width: 81.4rem;
+      border-radius: 0.5rem;
+    }
+    @media (max-width: 49em) {
+      width: 100%;
+      border-radius: 0.8rem;
+      &::before {
+        clip-path: url(#f-4svg);
+      }
+    }
   }
 
   // .modal__close
 
   &__close {
+    position: absolute;
+    z-index: 3;
+    top: -0.2rem;
+    right: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    svg {
+      width: 1.2rem;
+      height: 1.2rem;
+    }
+    @media (max-width: 49em) {
+      top: 0.5rem;
+      right: 1rem;
+      width: 2.5rem;
+      height: 2.5rem;
+
+      svg {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+    }
   }
 
   // .modal__inner
 
   &__inner {
+    position: relative;
+    z-index: 2;
+    padding: 1.7rem;
+    padding-bottom: 2.1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    color: var(--c-bg);
+    @media (max-width: 64em) and (min-width: 49.01em) {
+      padding: 2rem;
+    }
+    @media (max-width: 49em) {
+      padding-top: 7.5rem;
+      padding-bottom: 6.4rem;
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
   }
 
   // .modal__heading
 
   &__heading {
+    margin-bottom: 0.3rem;
+    max-width: 50.1rem;
+    font-family: 'Heading Now';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 6.3rem;
+    line-height: 5.3rem;
+    letter-spacing: 0.05rem;
+    text-align: center;
+    @media (max-width: 64em) {
+      line-height: 87%;
+    }
+    @media (max-width: 64em) and (min-width: 49.01em) {
+      max-width: 54.1rem;
+      font-size: 7.5rem;
+    }
+    @media (max-width: 49em) {
+      margin-bottom: 0.6rem;
+      max-width: 65.1rem;
+      font-size: 11rem;
+    }
+    .num {
+      letter-spacing: 0;
+    }
   }
 
   // .modal__logo
 
   &__logo {
+    margin-bottom: 3.3rem;
+    @media (max-width: 49em) {
+      margin-bottom: 8.8rem;
+    }
   }
 
   // .modal__logo-img
 
   &__logo-img {
+    width: 17.5rem;
+    @media (max-width: 64em) and (min-width: 49.01em) {
+      width: 20.9rem;
+    }
+    @media (max-width: 49em) {
+      width: 30.4rem;
+    }
   }
 
   // .modal__btn
 
   &__btn {
+    &.frame-btn.frame-btn_black {
+      min-width: 30rem;
+      @media (max-width: 49em) {
+        min-width: 69.6rem;
+      }
+
+      .frame-btn__txt {
+        padding: 0.9rem 1rem;
+        min-width: 25rem;
+        @media (max-width: 64em) and (min-width: 49.01em) {
+          padding: 0.3rem 1rem;
+          min-width: 20.5rem;
+        }
+        @media (max-width: 49em) {
+          padding: 2rem;
+          min-width: 24.6rem;
+        }
+      }
+      .frame-btn__inner {
+        @media (max-width: 64em) and (min-width: 49.01em) {
+          height: 6.8rem;
+        }
+        @media (max-width: 49em) {
+          height: 11.6rem;
+        }
+      }
+      .border {
+        height: 108%;
+        @media (max-width: 64em) and (min-width: 49.01em) {
+          width: 156.5%;
+        }
+        @media (max-width: 49em) {
+          width: 91%;
+        }
+      }
+    }
   }
 }

@@ -1,3 +1,4 @@
+import { openModal } from '../utils/modals';
 import { initItemsAnim, itemsTl } from './homepage';
 import {
   getCurSection,
@@ -103,6 +104,11 @@ tlPreloaderLeave.to('.preloader__video, #loader', {
   },
   onComplete: () => {
     document.getElementById('loader').remove();
+    if (document.querySelector('.schedule')) {
+      setTimeout(() => {
+        openModal('pariPromoModal');
+      }, 5000);
+    }
   },
 });
 

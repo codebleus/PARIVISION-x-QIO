@@ -4,7 +4,7 @@
     margin-bottom: 12rem;
   }
   @media (max-width: 49em) {
-    margin-bottom: 8.4rem;
+    margin-bottom: 12.4rem;
   }
   // .article__container
 
@@ -159,7 +159,7 @@
     }
 
     @media (max-width: 49em) {
-      margin-bottom: 14rem;
+      margin-bottom: 13rem;
       row-gap: 9rem;
     }
 
@@ -259,7 +259,7 @@
       }
 
       @media (max-width: 49em) {
-        margin-bottom: 18.8rem;
+        margin-bottom: 13.8rem;
       }
     }
 
@@ -353,7 +353,7 @@
       }
 
       @media (max-width: 49em) {
-        margin-bottom: 13.4rem;
+        margin-bottom: 9.4rem;
       }
     }
 
@@ -545,26 +545,44 @@
 .quote {
   position: relative;
 
+  @media (max-width: 64em) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (max-width: 64em) and (min-width: 49.01em) {
+    width: 101rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (max-width: 49em) {
+    flex-direction: column;
+  }
+
   // .quote__subtitle
 
   &__subtitle {
-    position: absolute;
-    top: 0;
-    left: 15rem;
-
     max-width: 16.5rem;
 
     font: var(--txt-medium-hf);
 
+    @media (min-width: 64.01em) {
+      position: absolute;
+      top: 0;
+      left: 15rem;
+    }
+
     @media (max-width: 64em) and (min-width: 49.01em) {
-      left: 9rem;
-      max-width: 22.5rem;
+      width: 22.5rem;
+      max-width: none;
       font-size: 2.1rem;
     }
 
     @media (max-width: 49em) {
-      // max-width: 35.6rem;
-      display: none;
+      margin-bottom: 11rem;
+      font-size: 3.6rem;
+      max-width: 31.5rem;
     }
   }
 
@@ -578,44 +596,27 @@
     @media (max-width: 64em) and (min-width: 49.01em) {
       font-size: 3.3rem;
       line-height: 3.2rem;
-      max-width: 92rem;
+      max-width: 73rem;
     }
 
     @media (max-width: 49em) {
       font-size: 5.4rem;
-      line-height: 5.4rem;
+      line-height: 99%;
     }
 
     &.pre-line {
       .line {
-        display: inline-block;
-        width: 73%;
-        margin-left: 46rem;
-
-        @media (max-width: 64em) and (min-width: 49.01em) {
-          width: 74%;
-          margin-left: 37rem;
-        }
-
-        @media (max-width: 49em) {
-          width: auto;
-          margin-left: 0;
-          text-indent: 46rem;
+        @media (min-width: 64.01em) {
+          display: inline-block;
+          width: 73%;
+          margin-left: 46rem;
         }
       }
       .pre-line__txt {
-        display: inline-block;
-        width: 92%;
-        padding-left: 15rem;
-
-        @media (max-width: 64em) and (min-width: 49.01em) {
-          width: 120%;
-          padding-left: 9rem;
-        }
-
-        @media (max-width: 49em) {
-          width: 100%;
-          padding-left: 0;
+        @media (min-width: 64.01em) {
+          display: inline-block;
+          width: 92%;
+          padding-left: 15rem;
         }
       }
     }
@@ -637,6 +638,11 @@
 
       text-indent: 0;
 
+      @media (max-width: 64em) and (min-width: 49.01em) {
+        width: 1.7rem;
+        height: 1.7rem;
+      }
+
       @media (max-width: 49em) {
         width: 2.4rem;
         height: 2.4rem;
@@ -647,35 +653,42 @@
       left: -2rem;
 
       @media (max-width: 49em) {
-        top: -4.5rem;
-        left: -2.5rem;
+        top: -3.5rem;
+        left: -1rem;
       }
     }
+
     > span:last-child span::after {
-      right: -3.8rem;
-      bottom: -1.5rem;
       transform: scale(-1);
 
+      @media (min-width: 64.01em) {
+        right: -3.8rem;
+        bottom: -1.5rem;
+      }
+
       @media (max-width: 64em) and (min-width: 49.01em) {
+        right: -3rem;
         bottom: -1rem;
+      }
+      @media (max-width: 49em) {
+        right: -3rem;
+        bottom: -3rem;
       }
     }
 
-    &:not(.pre-line) {
-      padding-left: 15.2rem;
-      max-width: 176rem;
-      text-indent: 31rem;
-
-      @media (max-width: 64em) and (min-width: 49.01em) {
-        padding-left: 9.2rem;
-        max-width: 113rem;
-        text-indent: 28rem;
+    @media (max-width: 64em) and (min-width: 49.01em) {
+      > span:last-child {
+        &::after {
+          bottom: -2rem;
+          right: -0.5rem;
+        }
       }
-
-      @media (max-width: 49em) {
-        padding-left: 0;
-        text-indent: 37rem;
-        max-width: 89%;
+    }
+    &:not(.pre-line) {
+      @media (min-width: 64.01em) {
+        padding-left: 15.2rem;
+        max-width: 176rem;
+        text-indent: 31rem;
       }
 
       @media (min-width: 49.01em) {
@@ -693,22 +706,21 @@
           }
 
           @media (max-width: 49em) {
-            top: -5rem;
-            left: -3rem;
+            top: -4rem;
+            left: -0.5rem;
           }
         }
         &::after {
+          transform: scale(-1);
           right: -6.2rem;
           bottom: -4rem;
-          transform: scale(-1);
 
           @media (max-width: 64em) and (min-width: 49.01em) {
             right: -1.5rem;
             bottom: -1rem;
           }
-
           @media (max-width: 49em) {
-            right: -30.2rem;
+            right: -3rem;
             bottom: -3rem;
           }
         }

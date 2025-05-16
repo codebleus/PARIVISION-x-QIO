@@ -3,6 +3,7 @@ import { initVideos, initWatchTimer, isTouchDevice } from './utils';
 import { lenis } from '../lib/lenis';
 import { checkScreenSize, initHomepageBullets } from './homepage';
 import { tlPreloader } from '../anim/timelines';
+import { closeModal } from './modals';
 
 export const mm = gsap.matchMedia();
 export const md = window.matchMedia('(max-width: 49em)');
@@ -145,6 +146,13 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   const onClickHandler = e => {
+    if (
+      e.target.closest('.modal-show') &&
+      (!e.target.closest('.modal__content') ||
+        e.target.closest('.modal__close'))
+    ) {
+      closeModal(document.querySelector('.modal_show').id);
+    }
     if (e.target.closest('.header__menu-btn')) {
       document.documentElement.classList.add('_show-menu');
     }
