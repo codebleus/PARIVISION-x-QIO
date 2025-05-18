@@ -1,4 +1,5 @@
 import { openModal } from '../utils/modals';
+import { waitImages } from '../utils/utils';
 import { initItemsAnim, itemsTl } from './homepage';
 import {
   getCurSection,
@@ -32,14 +33,16 @@ const hideLoader = () => {
         el.textContent = 100;
       });
     tlPreloaderLeave.play();
-  }, 2000);
+  }, 500);
 };
 
-if (document.querySelector('._page-loaded')) {
-  hideLoader();
-} else {
-  window.addEventListener('load', hideLoader);
-}
+waitImages(() => {
+  if (document.querySelector('._page-loaded')) {
+    hideLoader();
+  } else {
+    window.addEventListener('load', hideLoader);
+  }
+});
 
 const clearedProps = {
   opacity: 1,

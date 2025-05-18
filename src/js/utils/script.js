@@ -233,7 +233,7 @@ window.addEventListener('load', function () {
     });
     arr.forEach((item, idx) => {
       item.addEventListener('mouseleave', function (e) {
-        if (!e.relatedTarget.closest('.item-teams')) {
+        if (e.relatedTarget && !e.relatedTarget.closest('.item-teams')) {
           gsap.to(arr, { '--alpha': 0, duration: 0.5 });
         }
       });
@@ -305,6 +305,19 @@ window.addEventListener('load', function () {
     );
   }
 
+  if (document.querySelector('.article__group')) {
+    for (
+      let i = 0;
+      i < document.querySelectorAll('.article__group').length;
+      i++
+    ) {
+      const element = document.querySelectorAll('.article__group')[i];
+      const txt = element.querySelector('.article__txt_sm');
+      if (!txt || !txt.innerText.length) {
+        element.classList.add('_fww');
+      }
+    }
+  }
   setTimeout(() => {
     if (document.querySelector('.item-team-chapter__title')) {
       const items = document.querySelectorAll('.item-team-chapter__title');

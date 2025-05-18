@@ -206,6 +206,11 @@
   // .article__txt
 
   &__txt {
+    @media (max-width: 64em) and (min-width: 49.01em) {
+      &:not(&_sm, ._fww &) {
+        max-width: 65rem;
+      }
+    }
     @media (min-width: 49.01em) {
       &:not(&_sm, .article__head-txt &) {
         font-size: 3.1rem;
@@ -287,6 +292,10 @@
     column-gap: 18.8rem;
     width: 161.8rem;
 
+    &._fww {
+      grid-template-columns: 1fr;
+    }
+
     @media (max-width: 64em) and (min-width: 49.01em) {
       grid-template-columns: 1fr 25.5rem;
       margin-bottom: 14.6rem;
@@ -314,7 +323,6 @@
           padding-left: 9.5rem;
           padding-top: 0.5rem;
           text-indent: 18.5rem;
-          max-width: 65rem;
           font-size: 3.2rem;
           // line-height: 3.2rem;
           padding-left: 0.5rem;

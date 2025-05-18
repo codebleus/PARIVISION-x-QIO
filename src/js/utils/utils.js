@@ -2,6 +2,32 @@ export const randomNumber = () => {
   Math.floor(Math.random() * (max - min + 1)) + min;
 };
 
+export const waitImages = (callback = false) => {
+  const allImagesLoaded = () => {
+    document.documentElement.classList.add('_images-loaded');
+    if (callback) callback();
+  };
+  if (document.querySelector('.gallery')) {
+    const images = [...document.querySelectorAll('main img')];
+    const totalImages = images.length;
+    let imagesLoaded = 0;
+
+    images.forEach(img => {
+      img.addEventListener('load', imageLoaded);
+      img.setAttribute('src', img.src);
+    });
+
+    function imageLoaded() {
+      imagesLoaded++;
+      if (imagesLoaded == totalImages) {
+        allImagesLoaded();
+      }
+    }
+  } else {
+    allImagesLoaded();
+  }
+};
+
 export const initVideos = () => {
   const btns = gsap.utils.toArray('[data-play-btn]');
   const videos = gsap.utils.toArray('[data-video]');
