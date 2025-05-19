@@ -7,11 +7,6 @@
       <div class="wrapper">
         <main class="main">@@include('html/news-section.htm',{})</main>
         <div class="sort">
-          <button type="button" class="sort__btn btn">
-            <span class="btn__group">
-              <span class="btn__txt">tags</span>
-            </span>
-          </button>
           <div class="sort__tags-list tags-list">
             <div class="tags-list__inner">
               <ul class="tags-list__list">
@@ -54,6 +49,11 @@
               </ul>
             </div>
           </div>
+          <button type="button" class="sort__btn btn">
+            <span class="btn__group">
+              <span class="btn__txt">tags</span>
+            </span>
+          </button>
         </div>
         @@include('html/_preloader.htm',{}) @@include('html/_footer.htm',{})
         @@include('html/_svg.htm',{})

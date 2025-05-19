@@ -253,10 +253,6 @@
     display: none;
   }
 
-  @media (max-width: 64em) {
-    flex-direction: column-reverse;
-  }
-
   @media (max-width: 64em) and (min-width: 49.01em) {
     position: fixed;
     top: auto;

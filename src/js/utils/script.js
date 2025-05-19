@@ -21,10 +21,11 @@ export const resizeNsScreen = () => {
       }px`,
     });
   }
-  if (
-    document.querySelector('.header__sort-list') &&
-    document.querySelector('.lower-info')
-  ) {
+  if (document.querySelector('.header__sort-list')) {
+    const el = document.createElement('div');
+    el.classList.add('lower-info');
+    if (!document.querySelector('.lower-info'))
+      document.querySelector('body').append(el);
     const sort = document.querySelector('.header__sort-list');
     const lower = document.querySelector('.lower-info');
     const banner = document.querySelector('.schedule__banner');
@@ -304,7 +305,18 @@ window.addEventListener('load', function () {
       }
     );
   }
-
+  if (document.querySelectorAll('.images-article__image-wrap')) {
+    for (
+      let i = 0;
+      i < document.querySelectorAll('.images-article__image-wrap').length;
+      i++
+    ) {
+      const element = document.querySelectorAll('.images-article__image-wrap')[
+        i
+      ];
+      element.append(document.createElement('span'));
+    }
+  }
   if (document.querySelector('.article__group')) {
     for (
       let i = 0;
