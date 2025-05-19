@@ -104,10 +104,6 @@
 .item-schedule {
   text-transform: uppercase;
   @media (max-width: 64em) and (min-width: 49.01em) {
-    &:nth-child(1) .item-schedule__sublist-item:nth-child(2) {
-      transform: translateX(-4rem);
-    }
-
     &:nth-child(1) .item-schedule__sublist {
       padding-bottom: 4.2rem;
 
@@ -124,20 +120,6 @@
       padding-left: 0;
       align-items: flex-start;
     }
-    &:first-child .item-schedule__sublist-item:nth-child(2) {
-      transform: translateX(-6rem);
-    }
-  }
-  @media (min-width: 64.01em) {
-    &:first-child {
-      .item-schedule__sublist-item:not(
-          :nth-child(1),
-          :nth-child(6),
-          :nth-child(7)
-        ) {
-        transform: translateX(0.5rem);
-      }
-    }
   }
 
   &:not(:last-child, :first-child) {
@@ -153,16 +135,17 @@
     padding: 0 1rem;
 
     display: grid;
-    grid-template-columns: 10.3rem 1fr 33.5rem 28.5rem 29rem 29.3rem minmax(
+    grid-template-columns: 16.3rem 25rem 16.5rem 31.5rem 18rem 27.3rem minmax(
         6.2rem,
         auto
       );
+    column-gap: 7rem;
     align-items: center;
     height: 8.94rem;
     border-bottom: 0.5px solid var(--c-primary);
 
     @media (max-width: 64em) and (min-width: 49.01em) {
-      grid-template-columns: 16rem 96rem 41.5rem 28.5rem 29rem 29.3rem minmax(
+      grid-template-columns: 16rem 27rem 26.5rem 29.5rem 20rem 17.3rem minmax(
           6.2rem,
           auto
         );
@@ -170,7 +153,7 @@
     }
 
     @media (max-width: 49em) {
-      grid-template-columns: 27.4rem 43.2rem 33.6rem 28.8rem 28.9rem 28.3rem minmax(
+      grid-template-columns: 25.4rem 35.2rem 33.6rem 41.8rem 28.9rem 28.3rem minmax(
           8.2rem,
           auto
         );
@@ -184,12 +167,7 @@
     letter-spacing: 0.1rem;
     white-space: nowrap;
 
-    &:nth-child(2) {
-      justify-self: center;
-    }
-    &:nth-child(5) {
-      transform: translateX(0.5rem);
-    }
+    margin-right: auto;
 
     @media (max-width: 64em) and (min-width: 49.01em) {
       letter-spacing: 0.02rem;

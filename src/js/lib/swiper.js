@@ -50,6 +50,18 @@ window.addEventListener('load', function () {
       },
       on: {
         init: swiper => {
+          if (thumbs.length) {
+            thumbs[0].classList.add('_is-active');
+
+            thumbs.forEach((thumb, idx) => {
+              thumb.addEventListener('click', function () {
+                removeClasses(thumbs, '_is-active');
+                thumb.classList.add('_is-active');
+
+                swiper.slideTo(idx);
+              });
+            });
+          }
           swiper.el.addEventListener('click', function (e) {
             const cnt = document.querySelector('.gallery__container');
             const cntw = document.querySelector(
