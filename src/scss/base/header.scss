@@ -274,7 +274,7 @@
 
     display: flex;
     align-items: center;
-    column-gap: 0.1rem;
+    column-gap: 0.9rem;
 
     transform: translateX(-50%);
 
@@ -284,11 +284,7 @@
     }
 
     @media (max-width: 49em) {
-      position: static;
-      margin-left: auto;
-      margin-right: 1.5rem;
-      margin-top: 1.5rem;
-      transform: none;
+      display: none;
     }
   }
 
@@ -297,13 +293,14 @@
   &__lang-item {
     position: relative;
 
-    display: flex;
-    column-gap: 0.1rem;
-
     &:not(:last-child) {
       &::after {
         content: '/';
+        position: absolute;
+        right: -0.1rem;
+        top: 50%;
         line-height: 1;
+        transform: translate(100%, -50%);
       }
     }
   }
