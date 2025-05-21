@@ -67,3 +67,7 @@ html:not(._page-loaded) {
 @import 'sections/other';
 @import 'sections/achievements';
 @import 'sections/error-page';
+
+.swiper-button-lock {
+  pointer-events: none;
+}

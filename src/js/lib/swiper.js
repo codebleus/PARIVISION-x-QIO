@@ -8,6 +8,7 @@ window.addEventListener('load', function () {
         slidesPerView: 'auto',
         loop: true,
         spaceBetween: remToPx(7.1),
+        loop: true,
         navigation: {
           prevEl: '.news__controls .controls__btn_prev',
           nextEl: '.news__controls .controls__btn_next',
