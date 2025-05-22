@@ -238,16 +238,16 @@
   .set-homepage-css & {
     visibility: hidden;
 
-    &:first-child {
-      .item-teams__logo {
-        transform: translate(-50%, -50%) scaleY(0.6) skewX(var(--skew1));
-      }
-    }
-    &:last-child {
-      .item-teams__logo {
-        transform: translate(-50%, -50%) scaleY(0.6) skewX(var(--skew2));
-      }
-    }
+    // &:first-child {
+    //   .item-teams__logo {
+    //     transform: translate(-50%, -50%) scaleY(0.6) skewX(var(--skew1));
+    //   }
+    // }
+    // &:last-child {
+    //   .item-teams__logo {
+    //     transform: translate(-50%, -50%) scaleY(0.6) skewX(var(--skew2));
+    //   }
+    // }
   }
 
   @media (min-width: 49.01em) {
@@ -372,9 +372,9 @@
     transform: translate(-50%, -50%);
     transform-origin: center;
 
-    .set-homepage-css & {
-      transform: translate(-50%, -50%) scaleY(0.6);
-    }
+    // .set-homepage-css & {
+    //   transform: translate(-50%, -50%) scaleY(0.6);
+    // }
 
     svg {
       width: 42rem;

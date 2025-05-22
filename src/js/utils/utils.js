@@ -5,6 +5,7 @@ export const randomNumber = () => {
 export const waitImages = (callback = false) => {
   const allImagesLoaded = () => {
     document.documentElement.classList.add('_images-loaded');
+    document.documentElement.classList.add('_fonts-loaded');
     if (callback) callback();
   };
   if (document.querySelector('.gallery')) {

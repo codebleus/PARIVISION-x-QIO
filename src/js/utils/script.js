@@ -5,6 +5,13 @@ import { checkScreenSize, initHomepageBullets } from './homepage';
 import { tlPreloader } from '../anim/timelines';
 import { closeModal } from './modals';
 
+if (document.querySelector('video')) {
+  for (let i = 0; i < gsap.utils.toArray('video').length; i++) {
+    const element = gsap.utils.toArray('video')[i];
+    !element.autoplay && (element.src += '#t=0.1');
+  }
+}
+
 export const mm = gsap.matchMedia();
 export const md = window.matchMedia('(max-width: 49em)');
 export const isTouch = isTouchDevice();
@@ -256,13 +263,6 @@ window.addEventListener('load', function () {
 
   if (document.querySelector('.gallery'))
     document.documentElement.classList.add('gallery-page');
-
-  if (document.querySelector('video')) {
-    for (let i = 0; i < gsap.utils.toArray('video').length; i++) {
-      const element = gsap.utils.toArray('video')[i];
-      !element.autoplay && (element.src += '#t=0.1');
-    }
-  }
 
   if (
     document.querySelector(
