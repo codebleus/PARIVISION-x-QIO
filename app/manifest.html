@@ -14,16 +14,19 @@
 		document.fonts.ready.then(function() {
 				const e = document.getElementById('loader-time');
 				if (e) {
-					setInterval(function() {
-						const n = new Date();
-						let t = n.getHours(),
-							o = n.getMinutes(),
-							l = n.getSeconds();
-						t < 10 && (t = '0' + t),
-							o < 10 && (o = '0' + o),
-							l < 10 && (l = '0' + l),
-							(e.innerHTML = `${t + ':'}${o + ':'}${l}`);
-					}, 500);
+					function showTimeUTC4() {
+						const now = new Date();
+
+						const utcPlus4 = new Date(now.getTime() + 4 * 60 * 60 * 1000);
+
+						const hours = utcPlus4.getUTCHours().toString().padStart(2, '0');
+						const minutes = utcPlus4.getUTCMinutes().toString().padStart(2, '0');
+						const seconds = utcPlus4.getUTCSeconds().toString().padStart(2, '0');
+
+						e.innerHTML = `${hours}:${minutes}:${seconds}`;
+					}
+					showTimeUTC4();
+					setInterval(showTimeUTC4, 1000);
 				}
 				const n = document.querySelectorAll('.preloader__progress');
 				if (n.length) {
