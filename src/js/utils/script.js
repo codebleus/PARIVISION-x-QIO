@@ -330,6 +330,19 @@ window.addEventListener('load', function () {
       }
     }
   }
+  if (document.querySelector('.contacts__form')) {
+    const form = document.querySelector('.contacts__form');
+    document.addEventListener('formSubmitted', function (e) {
+      const txt = document.createElement('p');
+      txt.classList.add('form-txt');
+      txt.innerHTML = window.location.href.includes('ru/')
+        ? `форма отправлена`
+        : 'form sent';
+
+      form.classList.add('_form-sent');
+      form.append(txt);
+    });
+  }
   setTimeout(() => {
     if (document.querySelector('.item-team-chapter__title')) {
       const items = document.querySelectorAll('.item-team-chapter__title');
