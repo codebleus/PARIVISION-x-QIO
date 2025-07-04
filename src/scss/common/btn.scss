@@ -127,11 +127,16 @@
   }
 
   &__txt-sm {
-    font-family: 'Aeonik Mono';
+    font-family: 'Inter';
+    font-weight: 500;
     font-size: 0.8rem;
     line-height: 100%;
-
+    letter-spacing: 0.03rem;
+    word-spacing: 0.13rem;
     opacity: 0.4;
+    @media (max-width: 49em) {
+      word-spacing: 0.45rem;
+    }
   }
 }
 
