@@ -123,13 +123,6 @@
     }
   }
 
-  &:not(:last-child, :first-child) {
-    margin-left: -0.4rem;
-
-    @media (min-width: 64.01em) {
-      width: calc(100% + 0.4rem);
-    }
-  }
   // .item-schedule__sublist
 
   &__sublist {
