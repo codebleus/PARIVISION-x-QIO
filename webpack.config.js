@@ -41,6 +41,7 @@ module.exports = {
   entry: {
     app: path.resolve(__dirname, 'src/js/app.js'),
     index: path.resolve(__dirname, 'src/js/index.js'),
+    lenis: path.resolve(__dirname, 'src/js/lenis.js'),
   },
 
   // where the bundled file will resolve

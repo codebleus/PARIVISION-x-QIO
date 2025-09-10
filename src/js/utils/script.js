@@ -1,9 +1,9 @@
 import { itemsTl } from '../anim/homepage';
 import { initVideos, initWatchTimer, isTouchDevice } from './utils';
-import { lenis } from '../lib/lenis';
 import { checkScreenSize, initHomepageBullets } from './homepage';
 import { tlPreloader } from '../anim/timelines';
 import { closeModal } from './modals';
+import { lenis } from '../lenis';
 
 if (document.querySelector('video')) {
   for (let i = 0; i < gsap.utils.toArray('video').length; i++) {
@@ -317,19 +317,7 @@ window.addEventListener('load', function () {
       element.append(document.createElement('span'));
     }
   }
-  if (document.querySelector('.article__group')) {
-    for (
-      let i = 0;
-      i < document.querySelectorAll('.article__group').length;
-      i++
-    ) {
-      const element = document.querySelectorAll('.article__group')[i];
-      const txt = element.querySelector('.article__txt_sm');
-      if (!txt || !txt.innerText.length) {
-        element.classList.add('_fww');
-      }
-    }
-  }
+
   if (document.querySelector('.contacts__form')) {
     const form = document.querySelector('.contacts__form');
     document.addEventListener('formSubmitted', function (e) {

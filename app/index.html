@@ -10,6 +10,35 @@
 
 	<!-- critical js -->
 	<script>
+		const apply = (root = document) => {
+			root.querySelectorAll('.article__group').forEach(el => {
+				const txt = el.querySelector('.article__txt_sm');
+				if (!txt || !txt.textContent.trim()) el.classList.add('_fww');
+			});
+		};
+
+		document.addEventListener(
+			'readystatechange',
+			() => {
+				if (document.readyState !== 'loading') apply();
+			}, {
+				once: true,
+			}
+		);
+
+		const mo = new MutationObserver(muts => {
+			for (const m of muts) {
+				m.addedNodes.forEach(n => {
+					if (!(n instanceof Element)) return;
+					if (n.matches?.('.article__group')) apply(n);
+					else if (n.querySelector) apply(n);
+				});
+			}
+		});
+		mo.observe(document.documentElement, {
+			childList: true,
+			subtree: true,
+		});
 		document.fonts.ready.then(function() {
 				const e = document.getElementById('loader-time');
 				if (e) {

@@ -1,4 +1,4 @@
-import { lenis } from '../lib/lenis';
+import { lenis } from '../lenis';
 
 export const openModal = id => {
   if (document.getElementById(id)) {

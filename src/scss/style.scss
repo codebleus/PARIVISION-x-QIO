@@ -41,7 +41,7 @@
   position: relative;
 }
 
-html:not(._page-loaded) {
+html.homepage:not(._page-loaded) {
   overflow: hidden;
 }
 // --------------------------------------------------------------------------
