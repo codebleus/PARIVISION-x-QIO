@@ -2,7 +2,7 @@ import { itemsTl } from '../anim/homepage';
 import { initVideos, initWatchTimer, isTouchDevice } from './utils';
 import { checkScreenSize, initHomepageBullets } from './homepage';
 import { tlPreloader } from '../anim/timelines';
-import { closeModal } from './modals';
+import { closeModal, openModal } from './modals';
 import { lenis } from '../lenis';
 
 if (document.querySelector('video')) {
@@ -317,11 +317,11 @@ window.addEventListener('load', function () {
       element.append(document.createElement('span'));
     }
   }
-
   if (document.querySelector('.contacts__form')) {
     const form = document.querySelector('.contacts__form');
     document.addEventListener('formSubmitted', function (e) {
       const txt = document.createElement('p');
+      openModal('messageModal');
       txt.classList.add('form-txt');
       txt.innerHTML = window.location.href.includes('ru/')
         ? `форма отправлена`

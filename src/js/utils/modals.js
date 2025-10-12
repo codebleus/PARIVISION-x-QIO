@@ -7,6 +7,7 @@ export const openModal = id => {
     lenis.stop();
   }
 };
+
 export const closeModal = id => {
   if (document.getElementById(id)) {
     document.getElementById(id).classList.remove('modal_show');

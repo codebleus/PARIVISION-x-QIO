@@ -81,6 +81,29 @@
     margin-bottom: 1.5rem;
     display: flex;
     column-gap: 2.8rem;
+    &_column {
+      flex-direction: column;
+      align-items: center;
+      row-gap: 3rem;
+      text-align: center;
+      @media (max-width: 49em) {
+        row-gap: 5rem;
+      }
+      .modal__txt {
+        text-align: center;
+        line-height: 120%;
+        padding: 0;
+        @media (min-width: 49.01em) and (max-width: 64em) {
+          font-size: 2.4rem;
+        }
+        @media (min-width: 64.01em) {
+          font-size: 1.8rem;
+        }
+        @media (max-width: 49em) {
+          max-width: 80%;
+        }
+      }
+    }
     @media (max-width: 64em) and (min-width: 49.01em) {
       margin-right: 2rem;
       margin-bottom: 3rem;
@@ -220,6 +243,9 @@
     letter-spacing: 0.05rem;
     @media (max-width: 64em) {
       line-height: 87%;
+      &.h-x {
+        letter-spacing: 0.04em;
+      }
     }
     @media (max-width: 64em) and (min-width: 49.01em) {
       font-size: 9.6rem;
