@@ -1,5 +1,6 @@
 .article {
   margin-bottom: 8rem;
+
   @media (max-width: 64em) and (min-width: 49.01em) {
     margin-bottom: 12rem;
   }
@@ -95,7 +96,7 @@
     letter-spacing: 0.1rem;
 
     &::before {
-      content: '#';
+      content: "#";
     }
 
     @media (max-width: 64em) and (min-width: 49.01em) {
@@ -165,7 +166,7 @@
 
     .article__txt {
       max-width: 95%;
-      font-family: 'Heading Now Book';
+      font-family: "Heading Now Book";
       font-weight: 300;
       font-size: 6.5rem;
       line-height: 99%;

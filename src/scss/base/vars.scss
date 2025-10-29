@@ -5,10 +5,11 @@
   --c-secondary: #00191b;
 
   // font family
-  --ff-main: "Suisse Int'l";
-  --ff-heading: 'Heading Now';
-  --ff-mono: 'Inter';
-  --ff-numeric: 'Druk Text Cyr';
+  --ff-main: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans",
+    "Helvetica Neue", Arial, "Liberation Sans", sans-serif;
+  --ff-heading: "Heading Now";
+  --ff-mono: "Inter";
+  --ff-numeric: "Druk Text Cyr";
 
   // font size
   --fz-8-hf: 0.846rem;
