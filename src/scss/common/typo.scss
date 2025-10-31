@@ -8,16 +8,16 @@
 }
 
 .num {
-  font-family: 'Druk Text Cyr';
-  font-style: italic;
+  // font-family: 'Druk Text Cyr';
+  // font-style: italic;
 
-  [data-page='media'] & {
+  [data-page="media"] & {
     @media (min-width: 49.01em) {
       margin-left: -1rem;
     }
   }
 
-  [data-page='teams'] & {
+  [data-page="teams"] & {
     @media (max-width: 49em) {
       margin-left: -3rem;
     }
@@ -33,7 +33,7 @@
     font-size: 5rem;
     letter-spacing: 0.4rem;
 
-    [data-page='contact'] & {
+    [data-page="contact"] & {
       font-size: 6rem;
       letter-spacing: 0.3rem;
     }
@@ -41,7 +41,7 @@
 }
 
 .title-nrml {
-  font-family: 'Heading Now';
+  font-family: "Heading Now";
   font-size: var(--fz-36);
   line-height: 3.8rem;
 
@@ -63,7 +63,7 @@
   @media (max-width: 64em) and (min-width: 49.01em) {
     font-size: 12rem;
 
-    [data-page='contact'] & {
+    [data-page="contact"] & {
       font-size: 14rem;
       letter-spacing: 0.1rem;
     }
