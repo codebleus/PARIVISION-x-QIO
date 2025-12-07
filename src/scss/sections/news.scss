@@ -7,7 +7,7 @@
   justify-content: end;
 
   &::before {
-    content: '';
+    content: "";
     position: fixed;
     z-index: 2;
     top: -45vh;
@@ -39,7 +39,7 @@
   }
 
   @media (max-width: 64em) and (min-width: 49.01em) {
-    [data-current-section='links'].set-homepage-css & {
+    [data-current-section="links"].set-homepage-css & {
       opacity: 1;
       visibility: visible;
       height: var(--height);
@@ -56,7 +56,7 @@
 
   @media (min-width: 64.01em) {
     &::after {
-      content: '';
+      content: "";
 
       position: absolute;
       bottom: 9rem;
@@ -117,7 +117,7 @@
     }
 
     @media (max-width: 64em) and (min-width: 49.01em) {
-      [data-current-section='links'].set-homepage-css & {
+      [data-current-section="links"].set-homepage-css & {
         opacity: 1;
         transform: none;
         filter: none;
@@ -148,7 +148,7 @@
       }
 
       @media (max-width: 64em) and (min-width: 49.01em) {
-        [data-current-section='links'].set-homepage-css & {
+        [data-current-section="links"].set-homepage-css & {
           opacity: 1;
           visibility: visible;
           transform: none;
@@ -296,7 +296,7 @@
     inset: 0;
 
     &::before {
-      content: '';
+      content: "";
 
       position: absolute;
       inset: 0;
