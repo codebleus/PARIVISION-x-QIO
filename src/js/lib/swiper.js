@@ -1,32 +1,32 @@
-import { removeClasses, remToPx } from '../utils/utils';
-import { md, mm } from '../utils/script';
+import { removeClasses, remToPx } from "../utils/utils";
+import { md, mm } from "../utils/script";
 
-window.addEventListener('load', function () {
-  if (document.querySelector('.news__slider')) {
-    mm.add('(min-width: 64em)', () => {
-      const slider = new Swiper('.news__slider', {
-        slidesPerView: 'auto',
+window.addEventListener("load", function () {
+  if (document.querySelector(".news__slider")) {
+    mm.add("(min-width: 64em)", () => {
+      const slider = new Swiper(".news__slider", {
+        slidesPerView: "auto",
         loop: true,
         spaceBetween: remToPx(7.1),
         loop: true,
         navigation: {
-          prevEl: '.news__controls .controls__btn_prev',
-          nextEl: '.news__controls .controls__btn_next',
+          prevEl: ".news__controls .controls__btn_prev",
+          nextEl: ".news__controls .controls__btn_next",
         },
         pagination: {
-          el: '.news__controls .controls__fraction',
-          type: 'custom',
+          el: ".news__controls .controls__fraction",
+          type: "custom",
           renderCustom(swiper, current, total) {
-            return current + '//' + total;
+            return current + "//" + total;
           },
         },
         on: {
           sliderMove: () => {
-            document.documentElement.classList.add('_slide-move');
+            document.documentElement.classList.add("_slide-move");
           },
           touchEnd: () => {
             setTimeout(() => {
-              document.documentElement.classList.remove('_slide-move');
+              document.documentElement.classList.remove("_slide-move");
             }, 1000);
           },
         },
@@ -37,36 +37,43 @@ window.addEventListener('load', function () {
       };
     });
   }
-  if (document.querySelector('.gallery__slider')) {
-    const thumbs = gsap.utils.toArray('.gallery__thumb');
-    new Swiper('.gallery__slider', {
-      slidesPerView: 'auto',
+  if (document.querySelector(".gallery__slider")) {
+    const thumbs = new Swiper(".gallery__thumbs-wrap.swiper", {
+      slidesPerView: "auto",
+      loop: true,
+      slideToClickedSlide: true,
+    });
+    const slider = new Swiper(".gallery__slider", {
+      slidesPerView: 1,
       loop: true,
       preventClicks: false,
       preventClicksPropagation: false,
       passiveListeners: false,
       navigation: {
-        prevEl: '.gallery .gallery__controls-btn_prev',
-        nextEl: '.gallery .gallery__controls-btn_next',
+        prevEl: ".gallery .gallery__controls-btn_prev",
+        nextEl: ".gallery .gallery__controls-btn_next",
+      },
+      thumbs: {
+        swiper: thumbs,
       },
       on: {
         init: swiper => {
-          if (thumbs.length) {
-            thumbs[0].classList.add('_is-active');
+          // if (thumbs.length) {
+          //   thumbs[0].classList.add('_is-active');
 
-            thumbs.forEach((thumb, idx) => {
-              thumb.addEventListener('click', function () {
-                removeClasses(thumbs, '_is-active');
-                thumb.classList.add('_is-active');
+          //   thumbs.forEach((thumb, idx) => {
+          //     thumb.addEventListener('click', function () {
+          //       removeClasses(thumbs, '_is-active');
+          //       thumb.classList.add('_is-active');
 
-                swiper.slideTo(idx);
-              });
-            });
-          }
-          swiper.el.addEventListener('click', function (e) {
-            const cnt = document.querySelector('.gallery__container');
+          //       swiper.slideTo(idx);
+          //     });
+          //   });
+          // }
+          swiper.el.addEventListener("click", function (e) {
+            const cnt = document.querySelector(".gallery__container");
             const cntw = document.querySelector(
-              '.gallery__container'
+              ".gallery__container",
             ).offsetWidth;
             const bcr = cnt.getBoundingClientRect();
             const pw = md ? cntw / 4 : cntw / 6;
@@ -96,24 +103,24 @@ window.addEventListener('load', function () {
           //   }
           // });
         },
-        slideChange: swiper => {
-          if (thumbs.length && thumbs[swiper.realIndex]) {
-            removeClasses(thumbs, '_is-active');
-            thumbs[swiper.realIndex].classList.add('_is-active');
-          }
-        },
+        // slideChange: swiper => {
+        //   if (thumbs.length && thumbs[swiper.realIndex]) {
+        //     removeClasses(thumbs, '_is-active');
+        //     thumbs[swiper.realIndex].classList.add('_is-active');
+        //   }
+        // },
       },
     });
   }
-  if (document.querySelector('.other__slider')) {
-    mm.add('(min-width: 64em)', () => {
-      const slider = new Swiper('.other__slider', {
+  if (document.querySelector(".other__slider")) {
+    mm.add("(min-width: 64em)", () => {
+      const slider = new Swiper(".other__slider", {
         slidesPerView: 3,
         spaceBetween: remToPx(8.8),
         loop: true,
         navigation: {
-          prevEl: '.other .other__controls-btn_prev',
-          nextEl: '.other .other__controls-btn_next',
+          prevEl: ".other .other__controls-btn_prev",
+          nextEl: ".other .other__controls-btn_next",
         },
       });
 
