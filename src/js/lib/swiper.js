@@ -1,6 +1,32 @@
 import { removeClasses, remToPx } from "../utils/utils";
 import { md, mm } from "../utils/script";
 
+function setVerticalImages(swiperEl) {
+  const images = swiperEl.querySelectorAll("img");
+
+  images.forEach(img => {
+    if (img.dataset.checked) return;
+
+    if (img.complete) {
+      checkOrientation(img);
+    } else {
+      img.addEventListener("load", () => checkOrientation(img), {
+        once: true,
+      });
+    }
+  });
+}
+
+function checkOrientation(img) {
+  if (img.naturalHeight > img.naturalWidth) {
+    img.classList.add("_is-vertical");
+  } else {
+    img.classList.remove("_is-vertical");
+  }
+
+  img.dataset.checked = "true";
+}
+
 window.addEventListener("load", function () {
   if (document.querySelector(".news__slider")) {
     mm.add("(min-width: 64em)", () => {
@@ -40,12 +66,19 @@ window.addEventListener("load", function () {
   if (document.querySelector(".gallery__slider")) {
     const thumbs = new Swiper(".gallery__thumbs-wrap.swiper", {
       slidesPerView: "auto",
-      loop: true,
-      slideToClickedSlide: true,
+
+      watchSlidesProgress: true,
+      watchSlidesVisibility: true,
+
+      observer: true,
+      observeParents: true,
     });
+    setTimeout(() => {
+      thumbs.update();
+    }, 0);
     const slider = new Swiper(".gallery__slider", {
       slidesPerView: 1,
-      loop: true,
+      rewind: true,
       preventClicks: false,
       preventClicksPropagation: false,
       passiveListeners: false,
@@ -57,6 +90,17 @@ window.addEventListener("load", function () {
         swiper: thumbs,
       },
       on: {
+        slideChange(swiper) {
+          if (!swiper.thumbs?.swiper) return;
+
+          const thumbsSwiper = swiper.thumbs.swiper;
+          const index = swiper.realIndex;
+
+          thumbsSwiper.slideTo(index, 300);
+        },
+        slideChangeTransitionEnd(swiper) {
+          setVerticalImages(swiper.el);
+        },
         init: swiper => {
           // if (thumbs.length) {
           //   thumbs[0].classList.add('_is-active');
@@ -70,6 +114,7 @@ window.addEventListener("load", function () {
           //     });
           //   });
           // }
+          setVerticalImages(swiper.el);
           swiper.el.addEventListener("click", function (e) {
             const cnt = document.querySelector(".gallery__container");
             const cntw = document.querySelector(
