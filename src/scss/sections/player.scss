@@ -2,14 +2,20 @@
   margin-bottom: 9.5rem;
   padding-top: 13.3rem;
 
+  &:nth-last-child(2) {
+    padding-bottom: 42.4rem;
+  }
+
   @media (max-width: 49em) {
     padding-top: 11.4rem;
     margin-bottom: 6.5rem;
+    padding-bottom: 25.4rem;
   }
 
   @media (max-width: 64em) and (min-width: 49.01em) {
     padding-top: 10.3rem;
     margin-bottom: 4.5rem;
+    padding-bottom: 17rem;
   }
 
   // .player__container
@@ -300,14 +306,14 @@
     display: inline-flex;
   }
 }
-[data-page='player'] {
+[data-page="player"] {
   main {
     @media (max-width: 64em) {
       .lower-info {
         bottom: 3rem;
 
         &::after {
-          content: '';
+          content: "";
 
           position: absolute;
           bottom: -3.5rem;
