@@ -413,3 +413,15 @@
     }
   }
 }
+
+@media (min-width: 49.01em) {
+  .gallery__slider .gallery__image {
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .gallery__thumbs .gallery__image {
+    object-fit: cover;
+    object-position: center;
+  }
+}
